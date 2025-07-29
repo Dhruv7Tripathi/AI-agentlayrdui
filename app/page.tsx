@@ -15,7 +15,7 @@ export default function Home() {
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro eveniet dolore earum nesciunt fuga, repudiandae, inventore nisi labore, aperiam error itaque. Culpa vero dolores non. Iste similique ex blanditiis aperiam!
           </p>
         </div>
-        <div className="flex justify-center ">
+        <div className="flex justify-center mb-24  ">
           <button>
             <Link href="/#" className="ml-4 bg-blue-600 text-md text-white px-4 py-2 rounded-4xl">
               Get Started
@@ -29,9 +29,9 @@ export default function Home() {
         </div>
         <div className="flex justify-center rounded-2xl border mt-8 mx-28">
           <Image
-            src="/images/ai-agent-illustration.png"
+            src="/dashboard.png"
             alt="AI Agent Illustration"
-            className="h-full object-cover w-full"
+            className="rounded-2xl w-full"
             width={500}
             height={200}
           />
