@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import Image from 'next/image';
 import { Themetoggle } from '../ui/themetoggle';
 
 const menuItems = [
@@ -18,10 +18,19 @@ const Navbar = () => {
       <nav
         data-state={menuState && 'active'}
         className="w-full px-2 group">
-        <div className="flex items-center justify-between py-4">
-          <Link href="/" className="text-2xl font-bold">
-            AI Agent
-          </Link>
+        <div className="flex space-x-4  items-center py-4">
+          <div className='flex '>
+            <Image
+              src="/logo.png"
+              alt="Logo"
+              width={30}
+              height={10}
+              className="mr-2"
+            />
+            <Link href="/" className="text-2xl font-bold">
+              AI Agent
+            </Link>
+          </div>
           <div className="space-x-4">
             {menuItems.map((item) => (
               <Link key={item.name} href={item.href} className="text-lg">
