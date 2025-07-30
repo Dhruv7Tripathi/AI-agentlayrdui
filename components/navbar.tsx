@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
-import { Themetoggle } from '../ui/themetoggle';
+import { Themetoggle } from './ui/themetoggle';
 
 const menuItems = [
   { name: 'Pricing', href: '#pricing' },

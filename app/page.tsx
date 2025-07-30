@@ -1,7 +1,8 @@
-import Navbar from "@/components/landingpage/navbar";
+import Navbar from "@/components/navbar";
 import Image from "next/image";
-import Footer from "@/components/landingpage/footer";
+import Footer from "@/components/footer";
 import Link from "next/link";
+import { LogoCarouselDemo } from "@/components/icons";
 export default function Home() {
   return (
     <>
@@ -36,6 +37,9 @@ export default function Home() {
             height={200}
           />
         </div>
+      </div>
+      <div>
+        <LogoCarouselDemo />
       </div>
       <Footer />
     </>
