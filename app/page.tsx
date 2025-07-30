@@ -5,6 +5,7 @@ import Link from "next/link";
 import { LogoCarouselDemo } from "@/components/icons";
 import { Separator } from "@/components/ui/separator";
 import { DisplayCardsDemo } from "@/components/cards";
+import { WorldMapDemo } from "@/components/map";
 export default function Home() {
   return (
     <>
@@ -47,6 +48,15 @@ export default function Home() {
         {/* Display Cards in Top-Left Quadrant */}
         <div className="absolute top-0 left-0 w-1/2 h-1/2 flex items-center justify-center">
           <DisplayCardsDemo />
+        </div>
+        <div className="absolute top-0 left-0 w-1/2 h-1/2 flex items-center justify-center">
+          <DisplayCardsDemo />
+        </div>
+        <div className="absolute top-0 left-0 w-1/2 h-1/2 flex items-center justify-center">
+          <DisplayCardsDemo />
+        </div>
+        <div className="absolute bottom-0 right-0 w-1/2 h-1/2 flex items-center justify-center">
+          <WorldMapDemo />
         </div>
 
         {/* Horizontal Separator (Y-Axis) */}
