@@ -3,6 +3,8 @@ import Image from "next/image";
 import Footer from "@/components/footer";
 import Link from "next/link";
 import { LogoCarouselDemo } from "@/components/icons";
+import { Separator } from "@/components/ui/separator";
+import { DisplayCardsDemo } from "@/components/cards";
 export default function Home() {
   return (
     <>
@@ -38,9 +40,30 @@ export default function Home() {
           />
         </div>
       </div>
-      <div>
+      <div className="ml-12">
         <LogoCarouselDemo />
       </div>
+      <div className="max-w-7xl mx-auto h-220 border-dotted border-2 border-neutral-700 mt-12 mb-12 relative">
+        {/* Display Cards in Top-Left Quadrant */}
+        <div className="absolute top-0 left-0 w-1/2 h-1/2 flex items-center justify-center">
+          <DisplayCardsDemo />
+        </div>
+
+        {/* Horizontal Separator (Y-Axis) */}
+        <div className="absolute top-1/2 left-0 w-full -translate-y-1/2">
+          <div className="bg-neutral-700 mx-auto">
+            <Separator />
+          </div>
+        </div>
+
+        {/* Vertical Separator (X-Axis) */}
+        <div className="absolute left-1/2 top-0 h-full -translate-x-1/2 flex items-center">
+          <div className="bg-neutral-700 mx-auto h-full flex items-center">
+            <Separator orientation="vertical" className="h-full" />
+          </div>
+        </div>
+      </div>
+
       <Footer />
     </>
   );
