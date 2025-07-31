@@ -6,11 +6,12 @@ import { LogoCarouselDemo } from "@/components/icons";
 import { Separator } from "@/components/ui/separator";
 import { DisplayCardsDemo } from "@/components/cards";
 import { WorldMapDemo } from "@/components/map";
+import { RadialOrbitalTimelineDemo } from "@/components/orbital";
 export default function Home() {
   return (
-    <>
+    <div className="min-h-screen bg-white dark:bg-black">
       <Navbar />
-      <div>
+      <div className="">
         <div className="container mx-auto px-4 py-8 mt-24">
           <h1 className="text-7xl font-bold text-center">
             Welcome to AI Agent
@@ -49,8 +50,8 @@ export default function Home() {
         <div className="absolute top-0 left-0 w-1/2 h-1/2 flex items-center justify-center">
           <DisplayCardsDemo />
         </div>
-        <div className="absolute top-0 left-0 w-1/2 h-1/2 flex items-center justify-center">
-          <DisplayCardsDemo />
+        <div className="absolute top-0 right-0 w-1/2 h-1/2 flex items-center justify-center">
+          <RadialOrbitalTimelineDemo />
         </div>
         <div className="absolute top-0 left-0 w-1/2 h-1/2 flex items-center justify-center">
           <DisplayCardsDemo />
@@ -75,6 +76,6 @@ export default function Home() {
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 }
