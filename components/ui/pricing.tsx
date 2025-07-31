@@ -3,7 +3,7 @@
 import { buttonVariants } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
-// import { useMediaQuery } from "@/hooks/use-media-query";
+import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Check, Star } from "lucide-react";
@@ -36,7 +36,7 @@ export function Pricing({
   description = "Choose the plan that works for you\nAll plans include access to our platform, lead generation tools, and dedicated support.",
 }: PricingProps) {
   const [isMonthly, setIsMonthly] = useState(true);
-  // const isDesktop = useMediaQuery("(min-width: 768px)");
+  const isDesktop = useMediaQuery("(min-width: 768px)");
   const switchRef = useRef<HTMLButtonElement>(null);
 
   const handleToggle = (checked: boolean) => {
@@ -100,16 +100,16 @@ export function Pricing({
           <motion.div
             key={index}
             initial={{ y: 50, opacity: 1 }}
-            // whileInView={
-            //   isDesktop
-            //     ? {
-            //         y: plan.isPopular ? -20 : 0,
-            //         opacity: 1,
-            //         x: index === 2 ? -30 : index === 0 ? 30 : 0,
-            //         scale: index === 0 || index === 2 ? 0.94 : 1.0,
-            //       }
-            //     : {}
-            // }
+            whileInView={
+              isDesktop
+                ? {
+                  y: plan.isPopular ? -20 : 0,
+                  opacity: 1,
+                  x: index === 2 ? -30 : index === 0 ? 30 : 0,
+                  scale: index === 0 || index === 2 ? 0.94 : 1.0,
+                }
+                : {}
+            }
             viewport={{ once: true }}
             transition={{
               duration: 1.6,

@@ -1,3 +1,4 @@
+"use client"
 import Navbar from "@/components/navbar";
 import Image from "next/image";
 import Footer from "@/components/footer";
@@ -9,6 +10,7 @@ import { WorldMapDemo } from "@/components/map";
 import { RadialOrbitalTimelineDemo } from "@/components/orbital";
 import { PricingBasic } from "@/components/Pricing";
 import { ChatMessageListDemo } from "@/components/chat";
+import Testimonials from "@/components/testimonials";
 export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-black">
@@ -75,6 +77,9 @@ export default function Home() {
             <Separator orientation="vertical" className="h-full" />
           </div>
         </div>
+      </div>
+      <div>
+        <Testimonials />
       </div>
       <div className="max-w-7xl ">
 
