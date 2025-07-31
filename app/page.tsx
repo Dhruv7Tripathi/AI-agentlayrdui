@@ -7,6 +7,8 @@ import { Separator } from "@/components/ui/separator";
 import { DisplayCardsDemo } from "@/components/cards";
 import { WorldMapDemo } from "@/components/map";
 import { RadialOrbitalTimelineDemo } from "@/components/orbital";
+import { PricingBasic } from "@/components/Pricing";
+import { ChatMessageListDemo } from "@/components/chat";
 export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-black">
@@ -53,8 +55,8 @@ export default function Home() {
         <div className="absolute top-0 right-0 w-1/2 h-1/2 flex items-center justify-center">
           <RadialOrbitalTimelineDemo />
         </div>
-        <div className="absolute top-0 left-0 w-1/2 h-1/2 flex items-center justify-center">
-          <DisplayCardsDemo />
+        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 flex items-center justify-center">
+          <ChatMessageListDemo />
         </div>
         <div className="absolute bottom-0 right-0 w-1/2 h-1/2 flex items-center justify-center">
           <WorldMapDemo />
@@ -74,7 +76,10 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="max-w-7xl ">
 
+        <PricingBasic />
+      </div>
       <Footer />
     </div>
   );
