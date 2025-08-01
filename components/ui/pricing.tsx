@@ -192,9 +192,9 @@ export function Pricing({
                     variant: "outline",
                   }),
                   "group relative w-full gap-2 overflow-hidden text-lg font-semibold tracking-tighter",
-                  "transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-1 hover:bg-primary hover:text-primary-foreground",
+                  "transform-gpu ring-offset-current transition-all duration-300 ease-out  hover:bg-primary hover:text-white",
                   plan.isPopular
-                    ? "bg-primary text-primary-foreground"
+                    ? "bg-primary dark:text-white text-black"
                     : "bg-background text-foreground"
                 )}
               >

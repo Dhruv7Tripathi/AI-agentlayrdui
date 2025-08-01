@@ -66,7 +66,7 @@ const thirdColumn = testimonials.slice(6, 9);
 
 const Testimonials = () => {
   return (
-    <section className="bg-background my-20 relative">
+    <section className="bg-black my-20 relative">
 
       <div className="container z-10 mx-auto">
         <motion.div
@@ -74,7 +74,7 @@ const Testimonials = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           viewport={{ once: true }}
-          className="flex flex-col items-center justify-center max-w-[540px] mx-auto"
+          className="flex flex-col items-center justify-center max-w-[640px] mx-auto"
         >
           <div className="flex justify-center">
             <div className="border py-1 px-4 rounded-lg">Testimonials</div>

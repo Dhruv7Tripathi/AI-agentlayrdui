@@ -2,7 +2,6 @@ import { Github, Import, Linkedin, Twitter } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 const Footer = () => {
-
   return (
     <footer className="bg-white mb-30 dark:bg-black border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto py-12 flex flex-col md:flex-row justify-between items-start gap-8">
