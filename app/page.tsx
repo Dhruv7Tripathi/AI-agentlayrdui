@@ -25,7 +25,7 @@ export default function Home() {
               Empowering Businesses <br /> with Intelligent AI Agents
             </h1>
             <p className="text-neutral-200 text-center max-w-[800px] mt-4 mx-auto">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro eveniet dolore earum nesciunt fuga, repudiandae, inventore nisi labore, aperiam error itaque. Culpa vero dolores non. Iste similique ex blanditiis aperiam!
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit . Porro eveniet dolore earum nesciunt fuga, repudiandae, inventore nisi labore, aperiam error itaque. Culpa vero dolores non. Iste similique ex blanditiis aperiam!
             </p>
           </div>
           <div className="flex mt-4 space-x-2 justify-center mb-24  ">
@@ -70,42 +70,52 @@ export default function Home() {
 
         </div>
         <div className="ml-12 py-24">
-          <div className="container justify-center text-center mx-auto px-4 py-8 mt-24">
-            <h1>Trusted by Industry Leaders</h1>
-            <p className="text-neutral-500 text-center max-w-[800px] mt-4 mx-auto">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+          <div className="container mb-6 justify-center text-center mx-auto px-4 mt-22">
+            <h1 className="text-3xl mb-2">Trusted by Industry Leaders</h1>
+            <p className="text-neutral-500 text-center text-lg max-w-[800px] mt-4 mx-auto">
+              Join the ranks of forward-thinking companies already <br /> leveraging our AI technology
             </p>
           </div>
-          <LogoCarouselDemo />
+          <div className="flex mt-4 justify-center items-center">
+            <LogoCarouselDemo />
+          </div>
         </div>
-        <div className="max-w-7xl mx-auto h-220 border-dotted border-2 border-neutral-700 mt-12 mb-12 relative">
-          <div className="absolute top-0 left-0 w-1/2 h-1/2 flex items-center justify-center">
-            <DisplayCardsDemo />
+        <div className="container justify-center items-center mx-auto px-4 py-12">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl"> Features and Benefits</h1>
+            <p className="text-neutral-500 text-center text-sm max-w-[800px] mt-4 mx-auto">
+              Simplify crypto investing, trading, and portfolio management with <br />cutting-edge tools designed for everyone—from beginners to pros.
+            </p>
           </div>
-          <div className="absolute top-0 right-0 w-1/2 h-1/2 flex items-center justify-center">
-            <RadialOrbitalTimelineDemo />
-          </div>
-          <div className="absolute bottom-0 left-0 w-1/2 h-1/2 flex items-center justify-center">
-            <ChatMessageListDemo />
-          </div>
-          <div className="absolute bottom-0 right-0 w-1/2 h-1/2 flex items-center justify-center">
-            <WorldMapDemo />
-          </div>
-          <div className="absolute top-1/2 left-0 w-full -translate-y-1/2">
-            <div className="bg-neutral-700 mx-auto">
-              <Separator />
+          <div className="max-w-7xl mx-auto h-220 border-dotted border-2 border-neutral-700 mt-12 mb-12 relative">
+            <div className="absolute top-0 left-0 w-1/2 h-1/2 flex items-center justify-center">
+              <DisplayCardsDemo />
             </div>
-          </div>
-          <div className="absolute left-1/2 top-0 h-full -translate-x-1/2 flex items-center">
-            <div className="bg-neutral-700 mx-auto h-full flex items-center">
-              <Separator orientation="vertical" className="h-full" />
+            <div className="absolute top-0 right-0 w-1/2 h-1/2 flex items-center justify-center">
+              <RadialOrbitalTimelineDemo />
+            </div>
+            <div className="absolute bottom-0 left-0 w-1/2 h-1/2 flex items-center justify-center">
+              <ChatMessageListDemo />
+            </div>
+            <div className="absolute bottom-0 right-0 w-1/2 h-1/2 flex items-center justify-center">
+              <WorldMapDemo />
+            </div>
+            <div className="absolute top-1/2 left-0 w-full -translate-y-1/2">
+              <div className="bg-neutral-700 mx-auto">
+                <Separator />
+              </div>
+            </div>
+            <div className="absolute left-1/2 top-0 h-full -translate-x-1/2 flex items-center">
+              <div className="bg-neutral-700 mx-auto h-full flex items-center">
+                <Separator orientation="vertical" className="h-full" />
+              </div>
             </div>
           </div>
         </div>
         <div>
           <Testimonials />
         </div>
-        <div className="max-w-7xl ">
+        <div className="max-w-7xl mx-auto  ">
 
           <PricingBasic />
         </div>
