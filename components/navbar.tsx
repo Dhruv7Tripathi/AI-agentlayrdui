@@ -5,7 +5,8 @@ import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import { Themetoggle } from './ui/themetoggle';
-
+import { useEffect } from 'react';
+import { cn } from '@/lib/utils';
 const menuItems = [
   { name: 'Pricing', href: '#pricing' },
   { name: 'Blogs', href: '#blogs' },
@@ -14,11 +15,24 @@ const menuItems = [
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
+  const [scrollY, setScrollY] = React.useState(0);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
-    <header className="w-full border-b">
-      <nav className="container mx-auto px-4 py-3 flex items-center justify-between">
-        {/* Logo + Title */}
+    <header className={cn("w-full sticky top-0 shadow-lg backdrop-blur-sm z-90 border-b",
+      // scrollY
+      //   ? "border-b border-neutral-200/50 dark:border-neutral-800/50 bg-neutral-200/40 dark:bg-neutral-900/40 shadow-lg backdrop-blur-md"
+      //   : "border-transparent bg-transparent shadow-none backdrop-blur-none",
+    )}>
+      <nav className="container mx-auto px-8 py-3 flex items-center justify-between">
         <div className="flex ml-24 items-center space-x-2">
           <Image
             src="/logo.png"
@@ -66,7 +80,6 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Nav Dropdown */}
       {menuOpen && (
         <div className="md:hidden px-4 pb-4 space-y-2">
           {menuItems.map((item) => (

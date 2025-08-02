@@ -408,8 +408,8 @@ const allLogos = [
 
 export function LogoCarouselDemo() {
   return (
-    <div className="space-y-8 py-24">
-      <div className="mt-12 mb-12 ml-16">
+    <div className="space-y-8">
+      <div className="mb-12 ml-16">
 
         <LogoCarousel columnCount={6} logos={allLogos} />
       </div>
