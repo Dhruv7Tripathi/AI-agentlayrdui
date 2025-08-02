@@ -12,7 +12,9 @@ import { Button } from "@/components/ui/button"
 import { ChevronRight } from "lucide-react"
 import { Facebook, Twitter, Linkedin, Youtube, Globe, MessageSquare, Share2, Play } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-
+import { DisplayCardsDemo } from "@/components/cards";
+import { RadialOrbitalTimelineDemo } from "@/components/orbital";
+import { ChatMessageListDemo } from "@/components/chat";
 export default function Home() {
   return (
     <div>
@@ -51,9 +53,9 @@ export default function Home() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="relative mx-auto max-w-7xl"
+            className="relative py-8 mx-auto max-w-7xl"
           >
-            <div className="relative z-10 rounded-2xl w-[1300px] h-[800px] bg-neutral-900/60  backdrop-blur-md mx-auto mt-8 overflow-hidden">
+            <div className="relative z-10 py-8 rounded-2xl w-[1250px] h-[800px] bg-neutral-900/60  backdrop-blur-md mx-auto mt-8 overflow-hidden">
               <Image src="/dashboard.png" alt="AI-powered SaaS Dashboard" fill className="rounded-3xl " priority />
               <div className="absolute bottom-0 left-0 h-[480px] w-full bg-gradient-to-t dark:from-black from-white via-transparent to-transparent z-20" />
             </div>
@@ -72,7 +74,7 @@ export default function Home() {
         </div>
 
         {/* Features & Benefits Section */}
-        <div className="container justify-center items-center mx-auto px-4 py-12">
+        <div className="container justify-center items-center mx-auto px-12 py-12">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-white mb-4">Features & Benefits</h1>
             <p className="text-neutral-400 text-center text-lg max-w-[800px] mt-4 mx-auto">
@@ -81,129 +83,40 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
+          <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
             {/* Hosting over the edge */}
-            <div className="bg-neutral-900/80 backdrop-blur-sm rounded-2xl p-8 border border-neutral-800">
-              <div className="flex flex-col items-center justify-center h-full min-h-[300px]">
-                <div className="relative mb-8">
-                  <div className="w-32 h-32 rounded-full border-2 border-neutral-700 flex items-center justify-center relative">
-                    <MessageSquare className="w-8 h-8 text-neutral-400" />
-                    <div className="absolute -top-4 -left-4">
-                      <div className="w-12 h-12 rounded-full bg-neutral-800 flex items-center justify-center">
-                        <Facebook className="w-6 h-6 text-blue-500" />
-                      </div>
-                    </div>
-                    <div className="absolute -top-4 -right-4">
-                      <div className="w-12 h-12 rounded-full bg-neutral-800 flex items-center justify-center">
-                        <Linkedin className="w-6 h-6 text-blue-400" />
-                      </div>
-                    </div>
-                    <div className="absolute -bottom-4 -left-4">
-                      <div className="w-12 h-12 rounded-full bg-neutral-800 flex items-center justify-center">
-                        <Twitter className="w-6 h-6 text-sky-400" />
-                      </div>
-                    </div>
-                    <div className="absolute -bottom-4 -right-4">
-                      <div className="w-12 h-12 rounded-full bg-neutral-800 flex items-center justify-center">
-                        <Youtube className="w-6 h-6 text-red-500" />
-                      </div>
-                    </div>
-                    <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2">
-                      <div className="w-12 h-12 rounded-full bg-neutral-800 flex items-center justify-center">
-                        <Share2 className="w-6 h-6 text-orange-500" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Hosting over the edge</h3>
+            <div className="bg-black backdrop-blur-sm rounded-2xl p-8 border border-neutral-800">
+              <div className="flex flex-col items-center justify-center h-full min-h-[400px]">
+
+                <RadialOrbitalTimelineDemo />
+
+                {/* <h3 className="text-2xl font-bold text-white mb-4">Hosting over the edge</h3>
                 <p className="text-neutral-400 text-center">
                   With our edge network, we host your website by going into each city by ourselves.
-                </p>
+                </p> */}
               </div>
             </div>
 
             {/* Available in every country */}
-            <div className="bg-neutral-900/80 backdrop-blur-sm rounded-2xl p-8 border border-neutral-800">
+            <div className="bg-black backdrop-blur-sm rounded-2xl p-8 border border-neutral-800">
               <div className="flex flex-col items-center justify-center h-full min-h-[300px]">
-                <div className="mb-6">
-                  <WorldMapDemo />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-2">Available in every country</h3>
-                <p className="text-neutral-400 text-center mb-6">
-                  Access our platform from anywhere in the world with our globally distributed network and localized
-                  support in multiple languages.
-                </p>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-white">100+</div>
-                  <div className="text-xl text-neutral-400">Countries</div>
-                </div>
+                <ChatMessageListDemo />
               </div>
             </div>
 
             {/* Major User Adoption */}
-            <div className="bg-neutral-900/80 backdrop-blur-sm rounded-2xl p-8 border border-neutral-800">
+            <div className="bg-black backdrop-blur-sm rounded-2xl p-8 border border-neutral-800">
               <div className="flex flex-col items-center justify-center h-full min-h-[300px]">
-                <div className="flex space-x-4 mb-6">
-                  <div className="w-12 h-12 rounded-lg bg-neutral-800 flex items-center justify-center">
-                    <Play className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="w-12 h-12 rounded-lg bg-neutral-800 flex items-center justify-center">
-                    <Globe className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="w-12 h-12 rounded-lg bg-neutral-800 flex items-center justify-center">
-                    <Twitter className="w-6 h-6 text-sky-400" />
-                  </div>
-                  <div className="w-12 h-12 rounded-lg bg-neutral-800 flex items-center justify-center">
-                    <MessageSquare className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="w-12 h-12 rounded-lg bg-neutral-800 flex items-center justify-center">
-                    <Linkedin className="w-6 h-6 text-blue-400" />
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Major User Adoption</h3>
-                <p className="text-neutral-400 text-center mb-6">
-                  Join our growing community of over 500,000 users who trust our platform for their crypto trading and
-                  investment needs.
-                </p>
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="flex -space-x-2">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 border-2 border-neutral-900"></div>
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-r from-green-500 to-blue-500 border-2 border-neutral-900"></div>
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 border-2 border-neutral-900"></div>
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-r from-orange-500 to-red-500 border-2 border-neutral-900"></div>
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-r from-yellow-500 to-orange-500 border-2 border-neutral-900"></div>
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 border-2 border-neutral-900"></div>
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-white">542,000</div>
-                  <div className="text-xl text-neutral-400">Users</div>
-                </div>
+                <DisplayCardsDemo />
               </div>
             </div>
 
             {/* People love us */}
-            <div className="bg-neutral-900/80 backdrop-blur-sm rounded-2xl p-8 border border-neutral-800">
+            <div className="bg-black backdrop-blur-sm rounded-2xl p-8 border border-neutral-800">
               <div className="flex flex-col items-center justify-center h-full min-h-[300px]">
-                <h3 className="text-2xl font-bold text-white mb-2">People love us</h3>
-                <p className="text-neutral-400 text-center mb-8">
-                  See what our users are saying about their experience with our platform and why they love using it,
-                  consequat elementum lacus et bibendum.
-                </p>
-                <div className="w-full max-w-md bg-neutral-800/50 rounded-xl p-6 border border-neutral-700">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white font-semibold">
-                      MA
-                    </div>
-                    <div>
-                      <div className="text-white font-semibold">Manu Arora</div>
-                    </div>
-                  </div>
-                  <p className="text-neutral-300 text-sm">
-                    These cards are amazing, <span className="text-green-400">I want to use them</span> in my project.
-                    Framer motion is a godsend ngl tbh fam 🔥
-                  </p>
-                </div>
+                {/* <h3 className="text-2xl font-bold text-white mb-2">People love us</h3> */}
+
+                <WorldMapDemo />
               </div>
             </div>
           </div>
@@ -212,8 +125,6 @@ export default function Home() {
         <div>
           <Testimonials />
         </div>
-
-        {/* FAQ Section */}
 
         <div className="max-w-7xl mx-auto  ">
           <PricingBasic />

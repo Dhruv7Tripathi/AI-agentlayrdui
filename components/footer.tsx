@@ -1,104 +1,125 @@
-import { Github, Import, Linkedin, Twitter } from "lucide-react"
+import { ArrowRight, Github, Linkedin, Twitter } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+
 const Footer = () => {
   return (
-    <footer className="bg-white mb-30 dark:bg-black border-t border-gray-200 dark:border-gray-800">
-      <div className="max-w-7xl mx-auto py-12 flex flex-col md:flex-row justify-between items-start gap-8">
-        <div className="flex-1 md:max-w-md">
-          <div className="flex mb-2 items-center space-x-2">
-            <Image
-              src="/logo.png"
-              alt="Logo"
-              width={30}
-              height={30}
-              className="object-contain rounded-xl"
-            />
-            <Link href="/" className="text-xl font-bold">
-              AI Agent
-            </Link>
+    <footer className="w-full bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center space-x-2 mb-4">
+              <Image src="/logo.png" alt="Logo" width={30} height={30} className="object-contain rounded-xl" />
+              <Link href="/" className="text-xl font-bold text-foreground dark:text-white">
+                AI Agent
+              </Link>
+            </div>
+            <p className="text-sm text-muted-foreground dark:text-gray-400 mb-6 max-w-md">
+              Empowering businesses with intelligent AI agents. Transform your workflow with cutting-edge artificial
+              intelligence solutions designed for the modern enterprise.
+            </p>
+            <div className="flex space-x-3">
+              <Link
+                href="https://github.com"
+                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                aria-label="GitHub"
+              >
+                <Github className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+              </Link>
+              <Link
+                href="https://linkedin.com"
+                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+              </Link>
+              <Link
+                href="https://twitter.com"
+                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+              </Link>
+            </div>
           </div>
-          <p className="text-neutral-600 dark:text-gray-400 mb-6 max-w-sm">
-            lorem ipsum dolor sit amet. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <div className="flex space-x-4">
-            <Link
-              href="https://github.com"
-              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
-              aria-label="GitHub"
-            >
-              <Github className="w-5 h-5 text-gray-700 dark:text-gray-300" />
-            </Link>
-            <Link
-              href="https://linkedin.com"
-              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="w-5 h-5 text-gray-700 dark:text-gray-300" />
-            </Link>
-            <Link
-              href="https://twitter.com"
-              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
-              aria-label="Twitter"
-            >
-              <Twitter className="w-5 h-5 text-gray-700 dark:text-gray-300" />
-            </Link>
+
+          {/* Navigation */}
+          {/* <div className="mx-auto ml-24"> */}
+
+          <div>
+            <h4 className="font-semibold mx-auto text-foreground dark:text-white mb-6 text-lg">Navigation</h4>
+            <div className="flex flex-col space-y-3">
+              {[
+                { href: "/", label: "Home" },
+                { href: "/features", label: "Features" },
+                { href: "/pricing", label: "Pricing" },
+                { href: "/about", label: "About" },
+                { href: "/contact", label: "Contact" },
+              ].map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-muted-foreground hover:text-foreground dark:hover:text-white transition-colors duration-200 group flex items-center gap-2 text-sm"
+                >
+                  {link.label}
+                  <ArrowRight className="size-3 opacity-0 group-hover:text-blue-600 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h4 className="font-semibold text-foreground dark:text-white mb-6 text-lg">Resources</h4>
+            <div className="flex flex-col space-y-3">
+              {[
+                { href: "/blog", label: "Blog" },
+                { href: "/documentation", label: "Documentation" },
+                { href: "/support", label: "Support" },
+                { href: "/privacy", label: "Privacy Policy" },
+                { href: "/terms", label: "Terms of Service" },
+              ].map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-muted-foreground hover:text-foreground dark:hover:text-white transition-colors duration-200 group flex items-center gap-2 text-sm"
+                >
+                  {link.label}
+                  <ArrowRight className="size-3 opacity-0 group-hover:text-blue-600 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
-        <div className="flex flex-1 flex-col md:flex-row gap-8 w-full justify-end">
-          <div className="min-w-[160px]">
-            <h4 className="text-md font-semibold text-black dark:text-white mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="#about"
-                  className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#projects"
-                  className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
-                >
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#skills"
-                  className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
-                >
-                  Skills
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#contact"
-                  className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="min-w-[160px]">
-            <h4 className="text-md font-semibold text-black dark:text-white mb-4">Services</h4>
-            <ul className="space-y-2">
-              <li>
-                <span className="text-gray-600 dark:text-gray-400">Web Development</span>
-              </li>
-              <li>
-                <span className="text-gray-600 dark:text-gray-400">UI/UX Design</span>
-              </li>
-              <li>
-                <span className="text-gray-600 dark:text-gray-400">API Development</span>
-              </li>
-              <li>
-                <span className="text-gray-600 dark:text-gray-400">Consulting</span>
-              </li>
-            </ul>
+        {/* </div> */}
+
+        {/* Bottom Section */}
+        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p className="text-sm text-muted-foreground dark:text-gray-400">
+              © {new Date().getFullYear()} AI Agent. All rights reserved.
+            </p>
+            <div className="flex items-center space-x-6">
+              <Link
+                href="/privacy"
+                className="text-sm text-muted-foreground hover:text-foreground dark:hover:text-white transition-colors"
+              >
+                Privacy
+              </Link>
+              <Link
+                href="/terms"
+                className="text-sm text-muted-foreground hover:text-foreground dark:hover:text-white transition-colors"
+              >
+                Terms
+              </Link>
+              <Link
+                href="/cookies"
+                className="text-sm text-muted-foreground hover:text-foreground dark:hover:text-white transition-colors"
+              >
+                Cookies
+              </Link>
+            </div>
           </div>
         </div>
       </div>
