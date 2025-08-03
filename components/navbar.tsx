@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
-import { Themetoggle } from './ui/themetoggle';
+// import { Themetoggle } from './ui/themetoggle';
 import { cn } from '@/lib/utils';
 const menuItems = [
   { name: 'Pricing', href: '#pricing' },
@@ -14,17 +14,6 @@ const menuItems = [
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
-  // const [scrollY, setScrollY] = React.useState(0);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setScrollY(window.scrollY);
-  //   };
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
   return (
     <header className={cn("w-full sticky top-0 shadow-lg backdrop-blur-sm z-90 border-b",
       // scrollY
@@ -53,7 +42,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center mr-28">
-          <Themetoggle />
+          {/* <Themetoggle /> */}
           <div className='font-semibold  flex items-center'>
             <button className='ml-4'>
               <Link href="/login" className="ml-4 text-md">

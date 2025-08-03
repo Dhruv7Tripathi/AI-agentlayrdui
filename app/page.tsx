@@ -15,6 +15,14 @@ import { CardStackDemo } from "@/components/cards";
 import { RadialOrbitalTimelineDemo } from "@/components/orbital";
 import { ChatMessageListDemo } from "@/components/chat";
 export default function Home() {
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 },
+    },
+  }
   return (
     <div>
       <Navbar />
@@ -30,7 +38,7 @@ export default function Home() {
               blanditiis aperiam!
             </p>
           </div>
-          <div className="flex mt-4 space-x-2 justify-center mb-24  ">
+          <div className="flex mt-4 space-x-2 justify-center mb-12">
             <button>
               <Link href="/#" className="ml-4 bg-blue-600 font-semibold text-lg text-white px-4 py-2 rounded-4xl">
                 Get Started
@@ -48,6 +56,16 @@ export default function Home() {
               </Button>
             </motion.div>
           </div>
+          <motion.div
+            className="bottom-4 w-full z-20 text-center text-sm text-gray-800 dark:text-gray-200"
+            variants={itemVariants}
+          >
+            <p className="flex justify-center gap-4">
+              <span className="text-blue-400">✓</span> No credit card
+              <span className="text-blue-400">✓</span> 14-day trial
+              <span className="text-blue-400">✓</span> Cancel anytime
+            </p>
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
