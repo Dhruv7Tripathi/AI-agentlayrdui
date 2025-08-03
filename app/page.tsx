@@ -122,7 +122,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div>
+        <div className="mr-30 ml-28">
           <Testimonials />
         </div>
 

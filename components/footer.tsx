@@ -6,11 +6,17 @@ const Footer = () => {
   return (
     <footer className="w-full bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <Image src="/logo.png" alt="Logo" width={30} height={30} className="object-contain rounded-xl" />
+              <Image
+                src="/logo.png"
+                alt="AI Agent Logo"
+                width={30}
+                height={30}
+                className="object-contain rounded-xl"
+              />
               <Link href="/" className="text-xl font-bold text-foreground dark:text-white">
                 AI Agent
               </Link>
@@ -44,55 +50,55 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Navigation */}
-          {/* <div className="mx-auto ml-24"> */}
-
-          <div>
-            <h4 className="font-semibold mx-auto text-foreground dark:text-white mb-6 text-lg">Navigation</h4>
-            <div className="flex flex-col space-y-3">
-              {[
-                { href: "/", label: "Home" },
-                { href: "/features", label: "Features" },
-                { href: "/pricing", label: "Pricing" },
-                { href: "/about", label: "About" },
-                { href: "/contact", label: "Contact" },
-              ].map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-muted-foreground hover:text-foreground dark:hover:text-white transition-colors duration-200 group flex items-center gap-2 text-sm"
-                >
-                  {link.label}
-                  <ArrowRight className="size-3 opacity-0 group-hover:text-blue-600 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
-                </Link>
-              ))}
+          {/* Navigation & Resources */}
+          <div className="lg:col-span-2 flex space-x-12 flex-col md:flex-row justify-end gap-12">
+            {/* Navigation */}
+            <div>
+              <h4 className="font-semibold text-foreground dark:text-white mb-6 text-lg">Navigation</h4>
+              <div className="flex flex-col space-y-3">
+                {[
+                  { href: "/", label: "Home" },
+                  { href: "/features", label: "Features" },
+                  { href: "/pricing", label: "Pricing" },
+                  { href: "/about", label: "About" },
+                  { href: "/contact", label: "Contact" },
+                ].map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-muted-foreground hover:text-foreground dark:hover:text-white transition-colors duration-200 group flex items-center gap-2 text-sm"
+                  >
+                    {link.label}
+                    <ArrowRight className="size-3 opacity-0 group-hover:text-blue-600 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Resources */}
-          <div>
-            <h4 className="font-semibold text-foreground dark:text-white mb-6 text-lg">Resources</h4>
-            <div className="flex flex-col space-y-3">
-              {[
-                { href: "/blog", label: "Blog" },
-                { href: "/documentation", label: "Documentation" },
-                { href: "/support", label: "Support" },
-                { href: "/privacy", label: "Privacy Policy" },
-                { href: "/terms", label: "Terms of Service" },
-              ].map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-muted-foreground hover:text-foreground dark:hover:text-white transition-colors duration-200 group flex items-center gap-2 text-sm"
-                >
-                  {link.label}
-                  <ArrowRight className="size-3 opacity-0 group-hover:text-blue-600 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
-                </Link>
-              ))}
+            {/* Resources */}
+            <div>
+              <h4 className="font-semibold text-foreground dark:text-white mb-6 text-lg">Resources</h4>
+              <div className="flex flex-col space-y-3">
+                {[
+                  { href: "/blog", label: "Blog" },
+                  { href: "/documentation", label: "Documentation" },
+                  { href: "/support", label: "Support" },
+                  { href: "/privacy", label: "Privacy Policy" },
+                  { href: "/terms", label: "Terms of Service" },
+                ].map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-muted-foreground hover:text-foreground dark:hover:text-white transition-colors duration-200 group flex items-center gap-2 text-sm"
+                  >
+                    {link.label}
+                    <ArrowRight className="size-3 opacity-0 group-hover:text-blue-600 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-        {/* </div> */}
 
         {/* Bottom Section */}
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
