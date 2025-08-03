@@ -1,9 +1,13 @@
 import { IconWrapper, IconWrapperProps } from "./icons-wrapper";
 
 
-export const TypeScriptIcon: React.FC<IconWrapperProps> = (props) => {
+export const TypeScriptIcon: React.FC<IconWrapperProps> = ({
+  className = "w-20 h-20", // default size
+  ...props
+}) => {
+
   return (
-    <IconWrapper {...props}>
+    <IconWrapper className={className}  {...props}>
       <path
         d="M20 0h216c11.046 0 20 8.954 20 20v216c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20V20C0 8.954 8.954 0 20 0Z"
         fill="#3178C6"

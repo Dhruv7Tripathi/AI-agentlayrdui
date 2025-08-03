@@ -2,7 +2,11 @@ import { IconWrapper, IconWrapperProps } from "./icons-wrapper";
 
 export const SupabaseIcon: React.FC<IconWrapperProps> = (props) => {
   return (
-    <IconWrapper {...props}>
+    <IconWrapper
+      {...props}
+      width={64} // force width in px
+      height={64} // force height in px
+    >
       <path
         d="M63.708 110.284c-2.86 3.601-8.658 1.628-8.727-2.97l-1.007-67.251h45.22c8.19 0 12.758 9.46 7.665 15.874l-43.151 54.347Z"
         fill="url(#a)"

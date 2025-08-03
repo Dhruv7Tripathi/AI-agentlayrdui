@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button"
 import { ChevronRight } from "lucide-react"
 import { Facebook, Twitter, Linkedin, Youtube, Globe, MessageSquare, Share2, Play } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { DisplayCardsDemo } from "@/components/cards";
+import { CardStackDemo } from "@/components/cards";
 import { RadialOrbitalTimelineDemo } from "@/components/orbital";
 import { ChatMessageListDemo } from "@/components/chat";
 export default function Home() {
@@ -68,7 +68,7 @@ export default function Home() {
               Join the ranks of forward-thinking companies already <br /> leveraging our AI technology
             </p>
           </div>
-          <div className="flex mt-4 justify-center items-center">
+          <div className="flex mt-8 justify-center items-center">
             <LogoCarouselDemo />
           </div>
         </div>
@@ -84,9 +84,8 @@ export default function Home() {
           </div>
 
           <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
-            {/* Hosting over the edge */}
-            <div className="bg-black backdrop-blur-sm rounded-2xl p-8 border border-neutral-800">
-              <div className="flex flex-col items-center justify-center h-full min-h-[400px]">
+            <div className="bg-black backdrop-blur-md shadow-lg  shadow-primary/10 rounded-2xl p-8 border border-neutral-800">
+              <div className="flex flex-col items-center justify-center h-full min-h-[300px]">
 
                 <RadialOrbitalTimelineDemo />
 
@@ -97,23 +96,20 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Available in every country */}
-            <div className="bg-black backdrop-blur-sm rounded-2xl p-8 border border-neutral-800">
-              <div className="flex flex-col items-center justify-center h-full min-h-[300px]">
+            <div className="bg-black backdrop-blur-sm shadow-lg  shadow-primary/10 rounded-2xl p-8 border border-neutral-800">
+              <div className="flex flex-col items-center justify-center h-full min-h-[500px]">
                 <ChatMessageListDemo />
               </div>
             </div>
 
-            {/* Major User Adoption */}
-            <div className="bg-black backdrop-blur-sm rounded-2xl p-8 border border-neutral-800">
-              <div className="flex flex-col items-center justify-center h-full min-h-[300px]">
-                <DisplayCardsDemo />
+            <div className="bg-black backdrop-blur-sm shadow-lg  shadow-primary/10 rounded-2xl p-8 border border-neutral-800">
+              <div className="flex flex-col items-center justify-center h-full min-h-[200px]">
+                <CardStackDemo />
               </div>
             </div>
 
-            {/* People love us */}
-            <div className="bg-black backdrop-blur-sm rounded-2xl p-8 border border-neutral-800">
-              <div className="flex flex-col items-center justify-center h-full min-h-[300px]">
+            <div className="bg-black backdrop-blur-sm shadow-lg  shadow-primary/10 rounded-2xl p-8 border border-neutral-800">
+              <div className="flex flex-col items-center justify-center h-full min-h-[200px]">
                 {/* <h3 className="text-2xl font-bold text-white mb-2">People love us</h3> */}
 
                 <WorldMapDemo />

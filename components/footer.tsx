@@ -7,7 +7,6 @@ const Footer = () => {
     <footer className="w-full bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <Image
@@ -52,7 +51,7 @@ const Footer = () => {
 
           {/* Navigation & Resources */}
           <div className="lg:col-span-2 flex space-x-12 flex-col md:flex-row justify-end gap-12">
-            {/* Navigation */}
+
             <div>
               <h4 className="font-semibold text-foreground dark:text-white mb-6 text-lg">Navigation</h4>
               <div className="flex flex-col space-y-3">

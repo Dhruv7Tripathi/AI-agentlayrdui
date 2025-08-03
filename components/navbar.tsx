@@ -70,7 +70,7 @@ const Navbar = () => {
         </div>
 
         <div className="md:hidden flex items-center space-x-2">
-          <Themetoggle />
+          {/* <Themetoggle /> */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle Menu"
