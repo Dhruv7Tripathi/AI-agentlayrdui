@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import { Themetoggle } from './ui/themetoggle';
-import { useEffect } from 'react';
 import { cn } from '@/lib/utils';
 const menuItems = [
   { name: 'Pricing', href: '#pricing' },
@@ -15,17 +14,17 @@ const menuItems = [
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
-  const [scrollY, setScrollY] = React.useState(0);
+  // const [scrollY, setScrollY] = React.useState(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrollY(window.scrollY);
+  //   };
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
   return (
     <header className={cn("w-full sticky top-0 shadow-lg backdrop-blur-sm z-90 border-b",
       // scrollY

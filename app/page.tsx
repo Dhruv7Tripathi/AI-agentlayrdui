@@ -10,7 +10,6 @@ import Testimonials from "@/components/testimonials"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ChevronRight } from "lucide-react"
-import { Facebook, Twitter, Linkedin, Youtube, Globe, MessageSquare, Share2, Play } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { CardStackDemo } from "@/components/cards";
 import { RadialOrbitalTimelineDemo } from "@/components/orbital";
