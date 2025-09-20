@@ -133,7 +133,7 @@ export default function RadialOrbitalTimeline({
 
   return (
     <div
-      className="w-full h-100 flex flex-col items-center justify-center bg-black overflow-hidden"
+      className="w-full h-150 flex flex-col items-center justify-center bg-white dark:bg-black overflow-hidden"
       ref={containerRef}
       onClick={handleContainerClick}
     >
@@ -149,13 +149,13 @@ export default function RadialOrbitalTimeline({
           <div className="absolute w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 via-blue-500 to-teal-500 animate-pulse flex items-center justify-center z-10">
             <div className="absolute w-20 h-20 rounded-full border border-white/20 animate-ping opacity-70"></div>
             <div
-              className="absolute w-24 h-24 rounded-full border border-white/10 animate-ping opacity-50"
+              className="absolute w-24 h-24 rounded-full border border-black/10 dark:border-white/10 animate-ping opacity-50"
               style={{ animationDelay: "0.5s" }}
             ></div>
             <div className="w-8 h-8 rounded-full bg-white/80 backdrop-blur-md"></div>
           </div>
 
-          <div className="absolute w-96 h-96 rounded-full border border-white/10"></div>
+          <div className="absolute w-96 h-96 rounded-full border border-black/10 dark:border-white/10"></div>
 
           {hasMounted &&
             timelineData.map((item, index) => {
@@ -211,14 +211,14 @@ export default function RadialOrbitalTimeline({
 
                   <div
                     className={`absolute top-12 whitespace-nowrap text-xs font-semibold tracking-wider transition-all duration-300
-                    ${isExpanded ? "text-white scale-125" : "text-white/70"}`}
+                    ${isExpanded ? "text-black dark:text-white scale-125" : "text-neutral-900 dark:text-white/70"}`}
                   >
                     {item.title}
                   </div>
 
                   {isExpanded && (
                     <Card className="absolute top-20 left-1/2 -translate-x-1/2 w-64 bg-black/90 backdrop-blur-lg border-white/30 shadow-xl shadow-white/10 overflow-visible">
-                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-px h-3 bg-white/50"></div>
+                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-px h-3 bg-black/50 dark:bg-white/50"></div>
                       <CardHeader className="pb-2">
                         <div className="flex justify-between items-center">
                           <Badge className={`px-2 text-xs ${getStatusStyles(item.status)}`}>
@@ -228,7 +228,7 @@ export default function RadialOrbitalTimeline({
                         </div>
                         <CardTitle className="text-sm mt-2">{item.title}</CardTitle>
                       </CardHeader>
-                      <CardContent className="text-xs text-white/80">
+                      <CardContent className="text-xs text-black/80 dark:text-white/80">
                         <p>{item.content}</p>
 
                         <div className="mt-4 pt-3 border-t border-white/10">

@@ -1,52 +1,3 @@
-// "use client";
-
-// import DisplayCards from "@/components/ui/display-cards";
-// import { Sparkles } from "lucide-react";
-
-// const defaultCards = [
-//   {
-//     icon: <Sparkles className="size-4 text-blue-300" />,
-//     title: "Featured",
-//     description: "Discover amazing content",
-//     date: "Just now",
-//     iconClassName: "text-blue-500",
-//     titleClassName: "text-blue-500",
-//     className:
-//       "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
-//   },
-//   {
-//     icon: <Sparkles className="size-4 text-blue-300" />,
-//     title: "Popular",
-//     description: "Trending this week",
-//     date: "2 days ago",
-//     iconClassName: "text-blue-500",
-//     titleClassName: "text-blue-500",
-//     className:
-//       "[grid-area:stack] translate-x-12 translate-y-10 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
-//   },
-//   {
-//     icon: <Sparkles className="size-4 text-blue-300" />,
-//     title: "New",
-//     description: "Latest updates and features",
-//     date: "Today",
-//     iconClassName: "text-blue-500",
-//     titleClassName: "text-blue-500",
-//     className:
-//       "[grid-area:stack] translate-x-24 translate-y-20 hover:translate-y-10",
-//   },
-// ];
-
-// function DisplayCardsDemo() {
-//   return (
-//     // <div className="flex">
-//     <div className="max-w-3xl">
-//       <DisplayCards cards={defaultCards} />
-//     </div>
-//     // </div>
-//   );
-// }
-
-// export { DisplayCardsDemo };
 "use client";
 import { CardStack } from "./ui/card-stack";
 import { cn } from "@/lib/utils";
@@ -58,7 +9,6 @@ export function CardStackDemo() {
   );
 }
 
-// Small utility to highlight the content of specific section of a testimonial content
 export const Highlight = ({
   children,
   className,
@@ -77,11 +27,20 @@ export const Highlight = ({
     </span>
   );
 };
-
 const CARDS = [
   {
     id: 0,
-    name: "Manu Arora",
+    name: "AI Agent",
+    designation: "Intelligent Assistant",
+    content: (
+      <p>
+        An <Highlight>AI Agent</Highlight> is a software entity that can perceive its environment, reason about it, and take actions to achieve specific goals. Modern AI agents leverage machine learning and natural language processing to assist users, automate tasks, and provide intelligent recommendations.
+      </p>
+    ),
+  },
+  {
+    id: 1,
+    name: "Jane Doe",
     designation: "Senior Software Engineer",
     content: (
       <p>
@@ -91,7 +50,7 @@ const CARDS = [
     ),
   },
   {
-    id: 1,
+    id: 2,
     name: "Elon Musk",
     designation: "Senior Shitposter",
     content: (
@@ -104,7 +63,7 @@ const CARDS = [
     ),
   },
   {
-    id: 2,
+    id: 3,
     name: "Tyler Durden",
     designation: "Manager Project Mayhem",
     content: (

@@ -44,7 +44,7 @@ const Navbar = () => {
 
         <div className="hidden md:flex space-x-2 items-center mr-28">
           <Themetoggle />
-          <SiGithub size={22} />
+          <SiGithub size={22} className='text-black rounded-xl hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-900' />
           <div className='font-semibold  flex items-center'>
             <button className=''>
               <Link href="/login" className="ml-4 text-md">

@@ -38,10 +38,11 @@ export function Pricing({
   const [isMonthly, setIsMonthly] = useState(true);
   const isDesktop = useMediaQuery("(min-width: 768px)");
   const switchRef = useRef<HTMLButtonElement>(null);
+  const [hasShownConfetti, setHasShownConfetti] = useState(false);
 
   const handleToggle = (checked: boolean) => {
     setIsMonthly(!checked);
-    if (checked && switchRef.current) {
+    if (checked && !hasShownConfetti && switchRef.current) {
       const rect = switchRef.current.getBoundingClientRect();
       const x = rect.left + rect.width / 2;
       const y = rect.top + rect.height / 2;
@@ -53,18 +54,15 @@ export function Pricing({
           x: x / window.innerWidth,
           y: y / window.innerHeight,
         },
-        colors: [
-          "hsl(var(--primary))",
-          "hsl(var(--accent))",
-          "hsl(var(--secondary))",
-          "hsl(var(--muted))",
-        ],
+        colors: ["#3B82F6", "#2563EB", "#1D4ED8"], // Tailwind blue-500, 600, 700
+
         ticks: 200,
         gravity: 1.2,
         decay: 0.94,
         startVelocity: 30,
         shapes: ["circle"],
       });
+      setHasShownConfetti(true);
     }
   };
 
@@ -132,7 +130,7 @@ export function Pricing({
             )}
           >
             {plan.isPopular && (
-              <div className="absolute top-0 right-0 bg-primary py-0.5 px-2 rounded-bl-xl rounded-tr-xl flex items-center">
+              <div className="absolute top-0 right-0 dark:bg-primary bg-neutral-800 py-0.5 px-2 rounded-bl-xl rounded-tr-xl flex items-center">
                 <Star className="text-blue-600 h-4 w-4 fill-current" />
                 <span className="text-blue-600 ml-1 font-sans font-semibold">
                   Popular
@@ -194,7 +192,7 @@ export function Pricing({
                   "group relative w-full gap-2 overflow-hidden text-lg font-semibold tracking-tighter",
                   "transform-gpu ring-offset-current transition-all duration-300 ease-out ",
                   plan.isPopular
-                    ? "dark:bg-neutral-950 bg-neutral-50 dark:text-white text-black"
+                    ? "dark:bg-primary bg-neutral-50 dark:text-white text-black"
                     : "bg-background text-foreground"
                 )}
               >
