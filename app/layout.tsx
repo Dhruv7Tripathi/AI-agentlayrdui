@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PortFolio",
-  description: "Created for showcasing my work and skills",
+  title: "LayrdUI - AI Agent Platform Template",
+  description: "A flexible template for building AI agent platforms. Designed for developers to quickly create, customize, and deploy AI-powered applications.",
 };
 
 export default function RootLayout({

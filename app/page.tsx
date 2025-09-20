@@ -32,7 +32,7 @@ export default function Home() {
             <h1 className="text-7xl ml-12 max-w-8xl font-bold text-center">
               Empowering Businesses <br /> with Intelligent AI Agents
             </h1>
-            <p className="text-neutral-200 text-center max-w-[800px] mt-4 mx-auto">
+            <p className="dark:text-neutral-200 text-neutral-800 text-center max-w-[800px] mt-4 mx-auto">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit . Porro eveniet dolore earum nesciunt fuga,
               repudiandae, inventore nisi labore, aperiam error itaque. Culpa vero dolores non. Iste similique ex
               blanditiis aperiam!
@@ -44,14 +44,14 @@ export default function Home() {
                 Get Started
               </Link>
             </button>
-            <motion.div whileHover={{ scale: 1.03 }} transition={{ type: "spring", stiffness: 400, damping: 17 }}>
+            <motion.div>
               <Button
                 size="lg"
                 className="text-base w-full sm:w-auto bg-white dark:bg-black text-neutral-900 dark:text-neutral-100 group"
               >
                 Learn More
                 <motion.span whileHover={{ x: 4 }} transition={{ type: "spring", stiffness: 300, damping: 20 }}>
-                  <ChevronRight className="size-5 hover:size-6 text-blue-500 transition-transform group-hover:translate-x-1" />
+                  <ChevronRight className="size-5 mt-0.5 hover:size-6 text-blue-500 transition-transform group-hover:translate-x-2" />
                 </motion.span>
               </Button>
             </motion.div>

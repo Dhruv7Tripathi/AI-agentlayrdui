@@ -4,8 +4,9 @@ import React from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
-// import { Themetoggle } from './ui/themetoggle';
+import { Themetoggle } from './ui/themetoggle';
 import { cn } from '@/lib/utils';
+import { SiGithub } from 'react-icons/si';
 const menuItems = [
   { name: 'Pricing', href: '#pricing' },
   { name: 'Blogs', href: '#blogs' },
@@ -41,10 +42,11 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="hidden md:flex items-center mr-28">
-          {/* <Themetoggle /> */}
+        <div className="hidden md:flex space-x-2 items-center mr-28">
+          <Themetoggle />
+          <SiGithub size={22} />
           <div className='font-semibold  flex items-center'>
-            <button className='ml-4'>
+            <button className=''>
               <Link href="/login" className="ml-4 text-md">
                 Login
               </Link>
@@ -58,7 +60,7 @@ const Navbar = () => {
         </div>
 
         <div className="md:hidden flex items-center space-x-2">
-          {/* <Themetoggle /> */}
+          <Themetoggle />
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle Menu"
