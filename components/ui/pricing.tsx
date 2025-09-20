@@ -74,7 +74,7 @@ export function Pricing({
         <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
           {title}
         </h2>
-        <p className="text-muted-foreground text-lg whitespace-pre-line">
+        <p className="text-muted-foreground  text-lg whitespace-pre-line">
           {description}
         </p>
       </div>
@@ -192,9 +192,9 @@ export function Pricing({
                     variant: "outline",
                   }),
                   "group relative w-full gap-2 overflow-hidden text-lg font-semibold tracking-tighter",
-                  "transform-gpu ring-offset-current transition-all duration-300 ease-out  hover:bg-primary hover:text-white",
+                  "transform-gpu ring-offset-current transition-all duration-300 ease-out ",
                   plan.isPopular
-                    ? "bg-primary dark:text-white text-black"
+                    ? "dark:bg-neutral-950 bg-neutral-50 dark:text-white text-black"
                     : "bg-background text-foreground"
                 )}
               >

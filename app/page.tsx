@@ -40,14 +40,14 @@ export default function Home() {
           </div>
           <div className="flex mt-4 space-x-2 justify-center mb-12">
             <button>
-              <Link href="/#" className="ml-4 bg-blue-600 font-semibold text-lg text-white px-4 py-2 rounded-4xl">
+              <Link href="/#" className="ml-4 bg-blue-600 font-semibold text-lg text-white px-4 py-2 rounded-lg">
                 Get Started
               </Link>
             </button>
             <motion.div>
               <Button
                 size="lg"
-                className="text-base w-full sm:w-auto bg-white dark:bg-black text-neutral-900 dark:text-neutral-100 group"
+                className="text-base w-full sm:w-auto hover:bg-white hover:dark:bg-black bg-white dark:bg-black text-neutral-900 dark:text-neutral-100 group"
               >
                 Learn More
                 <motion.span whileHover={{ x: 4 }} transition={{ type: "spring", stiffness: 300, damping: 20 }}>
@@ -93,15 +93,15 @@ export default function Home() {
         {/* Features & Benefits Section */}
         <div className="container justify-center items-center mx-auto px-12 py-12">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-white mb-4">Features & Benefits</h1>
-            <p className="text-neutral-400 text-center text-lg max-w-[800px] mt-4 mx-auto">
+            <h1 className="text-4xl font-bold text-neutral-950 dark:text-neutral-50 mb-4">Features & Benefits</h1>
+            <p className="text-neutral-800   dark:text-neutral-400 text-center text-lg max-w-[800px] mt-4 mx-auto">
               Simplify crypto investing, trading, and portfolio management with <br />
               cutting-edge tools designed for everyone—from beginners to pros.
             </p>
           </div>
 
           <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
-            <div className="bg-black backdrop-blur-md shadow-lg  shadow-primary/10 rounded-2xl p-8 border border-neutral-800">
+            <div className="bg-black backdrop-blur-md shadow-lg  shadow-primary/10 rounded-2xl p-8 border border-neutral-200 dark:border-neutral-800">
               <div className="flex flex-col items-center justify-center h-full min-h-[300px]">
 
                 <RadialOrbitalTimelineDemo />
@@ -113,19 +113,19 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-black backdrop-blur-sm shadow-lg  shadow-primary/10 rounded-2xl p-8 border border-neutral-800">
+            <div className="bg-black backdrop-blur-sm shadow-lg  shadow-primary/10 rounded-2xl p-8 border border-neutral-200 dark:border-neutral-800">
               <div className="flex flex-col items-center justify-center h-full min-h-[500px]">
                 <ChatMessageListDemo />
               </div>
             </div>
 
-            <div className="bg-black backdrop-blur-sm shadow-lg  shadow-primary/10 rounded-2xl p-8 border border-neutral-800">
+            <div className="bg-black backdrop-blur-sm shadow-lg  shadow-primary/10 rounded-2xl p-8 border border-neutral-200 dark:border-neutral-800">
               <div className="flex flex-col items-center justify-center h-full min-h-[200px]">
                 <CardStackDemo />
               </div>
             </div>
 
-            <div className="bg-black backdrop-blur-sm shadow-lg  shadow-primary/10 rounded-2xl p-8 border border-neutral-800">
+            <div className="bg-black backdrop-blur-sm shadow-lg  shadow-primary/10 rounded-2xl p-8 border border-neutral-200 dark:border-neutral-800">
               <div className="flex flex-col items-center justify-center h-full min-h-[200px]">
                 {/* <h3 className="text-2xl font-bold text-white mb-2">People love us</h3> */}
 
@@ -144,71 +144,71 @@ export default function Home() {
         </div>
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
-            <p className="text-neutral-400 text-lg max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold text-neutral-900 dark:text-neutral-100 mb-4">Frequently Asked Questions</h2>
+            <p className="text-neutral-400 text-sm max-w-sm mx-auto">
               Find answers to common questions about our AI-powered platform and services.
             </p>
           </div>
 
           <div className="max-w-3xl mx-auto">
             <Accordion type="single" collapsible className="w-full space-y-4">
-              <AccordionItem value="item-1" className="bg-neutral-900/50 rounded-lg border border-neutral-800 px-6">
-                <AccordionTrigger className="text-white hover:text-neutral-300 text-left">
+              <AccordionItem value="item-1" className="bg-neutral-100/50 dark:bg-neutral-900/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
+                <AccordionTrigger className="text-neutral-900 dark:text-neutral-100 hover:text-neutral-600 dark:hover:text-neutral-300 text-left">
                   What makes your AI agents different from others?
                 </AccordionTrigger>
-                <AccordionContent className="text-neutral-400">
+                <AccordionContent className="text-neutral-800 dark:text-neutral-400">
                   Our AI agents are built with advanced machine learning algorithms and are specifically designed for
                   business automation. They offer superior accuracy, faster processing times, and seamless integration
                   with existing business systems.
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-2" className="bg-neutral-900/50 rounded-lg border border-neutral-800 px-6">
-                <AccordionTrigger className="text-white hover:text-neutral-300 text-left">
+              <AccordionItem value="item-2" className="bg-neutral-100/50 dark:bg-neutral-900/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
+                <AccordionTrigger className="text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 text-left">
                   How quickly can I get started with your platform?
                 </AccordionTrigger>
-                <AccordionContent className="text-neutral-400">
+                <AccordionContent className="text-neutral-800 dark:text-neutral-400">
                   You can get started in minutes! Our onboarding process is streamlined and includes step-by-step
                   guidance. Most users are up and running within 15 minutes of signing up.
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-3" className="bg-neutral-900/50 rounded-lg border border-neutral-800 px-6">
-                <AccordionTrigger className="text-white hover:text-neutral-300 text-left">
+              <AccordionItem value="item-3" className="bg-neutral-100/50 dark:bg-neutral-900/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
+                <AccordionTrigger className="text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 text-left">
                   Is my data secure with your platform?
                 </AccordionTrigger>
-                <AccordionContent className="text-neutral-400">
+                <AccordionContent className="text-neutral-800 dark:text-neutral-400">
                   Absolutely. We use enterprise-grade security measures including end-to-end encryption, regular
                   security audits, and compliance with industry standards like SOC 2 and GDPR. Your data is protected at
                   all times.
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-4" className="bg-neutral-900/50 rounded-lg border border-neutral-800 px-6">
-                <AccordionTrigger className="text-white hover:text-neutral-300 text-left">
+              <AccordionItem value="item-4" className="bg-neutral-100/50 dark:bg-neutral-900/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
+                <AccordionTrigger className="text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 text-left">
                   What kind of support do you offer?
                 </AccordionTrigger>
-                <AccordionContent className="text-neutral-400">
+                <AccordionContent className="text-neutral-800 dark:text-neutral-400">
                   We provide 24/7 customer support through multiple channels including live chat, email, and phone. Our
                   support team consists of AI specialists who can help with both technical and strategic questions.
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-5" className="bg-neutral-900/50 rounded-lg border border-neutral-800 px-6">
-                <AccordionTrigger className="text-white hover:text-neutral-300 text-left">
+              <AccordionItem value="item-5" className="bg-neutral-100/50 dark:bg-neutral-900/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
+                <AccordionTrigger className="text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 text-left">
                   Can I integrate your AI agents with my existing tools?
                 </AccordionTrigger>
-                <AccordionContent className="text-neutral-400">
+                <AccordionContent className="text-neutral-800 dark:text-neutral-400">
                   Yes! Our platform offers extensive integration capabilities with popular business tools, CRMs,
                   databases, and APIs. We also provide custom integration support for enterprise clients.
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-6" className="bg-neutral-900/50 rounded-lg border border-neutral-800 px-6">
-                <AccordionTrigger className="text-white hover:text-neutral-300 text-left">
+              <AccordionItem value="item-6" className="bg-neutral-100/50 dark:bg-neutral-900/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
+                <AccordionTrigger className="text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 text-left">
                   What pricing plans do you offer?
                 </AccordionTrigger>
-                <AccordionContent className="text-neutral-400">
+                <AccordionContent className="text-neutral-800 dark:text-neutral-400">
                   We offer flexible pricing plans to suit businesses of all sizes, from startups to enterprises. Our
                   plans include a free tier for getting started, professional plans for growing businesses, and custom
                   enterprise solutions.

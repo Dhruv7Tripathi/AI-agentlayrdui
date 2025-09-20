@@ -16,7 +16,7 @@ const menuItems = [
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
   return (
-    <header className={cn("w-full sticky top-0 shadow-lg backdrop-blur-sm z-90 border-b",
+    <header className={cn("w-full border-b border-neutral-200 dark:border-neutral-800 z-90 ",
       // scrollY
       //   ? "border-b border-neutral-200/50 dark:border-neutral-800/50 bg-neutral-200/40 dark:bg-neutral-900/40 shadow-lg backdrop-blur-md"
       //   : "border-transparent bg-transparent shadow-none backdrop-blur-none",

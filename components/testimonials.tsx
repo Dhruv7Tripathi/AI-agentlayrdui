@@ -65,9 +65,9 @@ const thirdColumn = testimonials.slice(6, 9);
 
 const Testimonials = () => {
   return (
-    <section className="bg-black my-20 relative w-full overflow-hidden">
+    <section className="bg-white dark:bg-black my-20 relative w-full overflow-hidden">
       {/* Header container */}
-      <div className="max-w-7xl px-4 sm:px-6 lg:px-8 z-10 mx-auto">
+      <div className="max-w-7xl mb-16 px-4 sm:px-6 lg:px-8 z-10 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,13 +75,10 @@ const Testimonials = () => {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center"
         >
-          <div className="flex justify-center">
-            <div className="border py-1 px-4 rounded-lg text-white border-white/30">Testimonials</div>
-          </div>
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5 text-white">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5 text-black dark:text-white">
             What our users say
           </h2>
-          <p className="text-center mt-5 text-white/70">
+          <p className="text-center mt-5 text-neutral-600 dark:text-neutral-400 max-w-2xl">
             See what our customers have to say about us.
           </p>
         </motion.div>
