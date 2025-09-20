@@ -72,7 +72,7 @@ export function Pricing({
         <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
           {title}
         </h2>
-        <p className="text-muted-foreground  text-lg whitespace-pre-line">
+        <p className="text-muted-foreground mx-auto max-w-xl text-lg whitespace-pre-line">
           {description}
         </p>
       </div>
@@ -130,7 +130,7 @@ export function Pricing({
             )}
           >
             {plan.isPopular && (
-              <div className="absolute top-0 right-0 dark:bg-primary bg-neutral-800 py-0.5 px-2 rounded-bl-xl rounded-tr-xl flex items-center">
+              <div className="absolute top-0 right-0 text-neutral-50 dark:text-neutral-950 bg-neutral-800 dark:bg-neutral-200 py-0.5 px-2 rounded-bl-xl rounded-tr-xl flex items-center">
                 <Star className="text-blue-600 h-4 w-4 fill-current" />
                 <span className="text-blue-600 ml-1 font-sans font-semibold">
                   Popular

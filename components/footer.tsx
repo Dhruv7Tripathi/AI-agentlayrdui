@@ -5,7 +5,7 @@ import Image from "next/image"
 const Footer = () => {
   return (
     <footer className="w-full bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-9xl mt-8 mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
@@ -100,32 +100,17 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm text-muted-foreground dark:text-gray-400">
-              © {new Date().getFullYear()} AI Agent. All rights reserved.
-            </p>
-            <div className="flex items-center space-x-6">
-              <Link
-                href="/privacy"
-                className="text-sm text-muted-foreground hover:text-foreground dark:hover:text-white transition-colors"
-              >
-                Privacy
-              </Link>
-              <Link
-                href="/terms"
-                className="text-sm text-muted-foreground hover:text-foreground dark:hover:text-white transition-colors"
-              >
-                Terms
-              </Link>
-              <Link
-                href="/cookies"
-                className="text-sm text-muted-foreground hover:text-foreground dark:hover:text-white transition-colors"
-              >
-                Cookies
-              </Link>
-            </div>
-          </div>
+        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800 flex justify-center items-center">
+          <h1>Made with {" "}
+            <span className="text-blue-500 animate-pulse">
+              💙
+            </span>
+            {" "} by
+            <Link href={"https://layrdui.dhruvtripathi.in"} target="_blank" className="ml-1">
+
+              LayrdUI
+            </Link>
+          </h1>
         </div>
       </div>
     </footer>

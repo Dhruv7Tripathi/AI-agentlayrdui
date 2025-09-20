@@ -1,4 +1,4 @@
-import { TestimonialsColumn } from "@/components/ui/testimonials-columns-1";
+import { TestimonialsColumn } from "@/components/ui/testimonials-columns";
 import { motion } from "framer-motion";
 
 const testimonials = [
@@ -67,7 +67,7 @@ const Testimonials = () => {
   return (
     <section className="bg-white dark:bg-black my-20 relative w-full overflow-hidden">
       {/* Header container */}
-      <div className="max-w-7xl mb-16 px-4 sm:px-6 lg:px-8 z-10 mx-auto">
+      <div className="max-w-9xl mb-16 px-4 sm:px-6 lg:px-8 z-10 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,10 +75,10 @@ const Testimonials = () => {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center"
         >
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5 text-black dark:text-white">
-            What our users say
+          <h2 className="bg-gradient-stop mx-auto max-w-6xl text-balance bg-gradient-to-br from-neutral-800 via-neutral-800 to-neutral-900/30 dark:from-neutral-100 dark:via-neutral-100 via-50% dark:to-neutral-100/30 bg-clip-text py-2 px-2 text-6xl font-bold leading-[1.1] tracking-tighter text-transparent md:text-6xl lg:text-6xl">
+            What our users say ?
           </h2>
-          <p className="text-center mt-5 text-neutral-600 dark:text-neutral-400 max-w-2xl">
+          <p className="text-center  text-neutral-600 dark:text-neutral-400 max-w-2xl">
             See what our customers have to say about us.
           </p>
         </motion.div>

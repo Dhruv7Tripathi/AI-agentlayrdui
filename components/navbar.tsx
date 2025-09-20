@@ -22,7 +22,7 @@ const Navbar = () => {
       //   : "border-transparent bg-transparent shadow-none backdrop-blur-none",
     )}>
       <nav className="container mx-auto px-8 py-3 flex items-center justify-between">
-        <div className="flex ml-24 items-center space-x-2">
+        <div className="flex  items-center space-x-2">
           <Image
             src="/logo.png"
             alt="Logo"
@@ -33,26 +33,26 @@ const Navbar = () => {
           <Link href="/" className="text-xl font-bold">
             AI Agent
           </Link>
-          <div className="hidden md:flex ml-12 space-x-4">
+          <div className="hidden md:flex ml-12 ">
             {menuItems.map((item) => (
-              <Link key={item.name} href={item.href} className="text-sm hover:underline">
+              <Link key={item.name} href={item.href} className="text-sm py-2 px-4 rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-950">
                 {item.name}
               </Link>
             ))}
           </div>
         </div>
 
-        <div className="hidden md:flex space-x-2 items-center mr-28">
+        <div className="hidden md:flex  items-center ">
           <Themetoggle />
-          <SiGithub size={22} className='text-black rounded-xl hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-900' />
+          <SiGithub size={22} className='text-black ml-4  dark:text-white ' />
           <div className='font-semibold  flex items-center'>
             <button className=''>
-              <Link href="/login" className="ml-4 text-md">
+              <Link href="/login" className="ml-4 text-md py-2 px-4 rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-950">
                 Login
               </Link>
             </button>
             <button>
-              <Link href="/signup" className="ml-4 bg-blue-600 text-md text-white px-4 py-2 rounded-4xl">
+              <Link href="/signup" className="ml-4 bg-blue-600 text-md text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                 Sign Up
               </Link>
             </button>

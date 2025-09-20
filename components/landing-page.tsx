@@ -10,10 +10,11 @@ import Testimonials from "@/components/testimonials"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ChevronRight } from "lucide-react"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { CardStackDemo } from "@/components/cards";
 import { RadialOrbitalTimelineDemo } from "@/components/orbital";
 import { ChatMessageListDemo } from "@/components/chat";
+import Faq from "./faq"
+import Cta from "./cta"
 export default function LandingPage() {
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -29,12 +30,14 @@ export default function LandingPage() {
       <div className="min-h-screen bg-white dark:bg-black">
         <div className="">
           <div className="container justify-center text-center mx-auto px-4 py-8 mt-24">
-            <h1 className="text-7xl ml-12 max-w-8xl font-bold text-center">
-              Empowering Businesses <br /> with Intelligent AI Agents
+            <h1
+              className="bg-gradient-stop mx-auto max-w-6xl text-balance bg-gradient-to-br from-neutral-800 via-neutral-800 to-neutral-900/30 dark:from-neutral-100 dark:via-neutral-100 via-50% dark:to-neutral-100/30 bg-clip-text py-2 text-5xl font-medium leading-[1.1] tracking-tighter text-transparent md:text-6xl lg:text-7xl"
+            >
+              Automate Smarter. Scale Faster.
             </h1>
             <p className="dark:text-neutral-200 text-neutral-800 text-center max-w-[800px] mt-4 mx-auto">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit . Porro eveniet dolore earum nesciunt fuga,
-              repudiandae, inventore nisi labore, aperiam error itaque. Culpa vero dolores non. Iste similique ex
+              repudiandae, inventore nisi labore, aperiam error itaque. Culpa vero dolores non. Iste  ex
               blanditiis aperiam!
             </p>
           </div>
@@ -80,7 +83,7 @@ export default function LandingPage() {
         </div>
         <div className="ml-12 py-24">
           <div className="container mb-6 justify-center text-center mx-auto px-4 mt-22">
-            <h1 className="text-3xl mb-2">Trusted by Industry Leaders</h1>
+            <h1 className="bg-gradient-stop mx-auto max-w-6xl text-balance bg-gradient-to-br from-neutral-800 via-neutral-800 to-neutral-900/30 dark:from-neutral-100 dark:via-neutral-100 via-50% dark:to-neutral-100/30 bg-clip-text py-2 px-2 text-6xl font-bold leading-[1.1] tracking-tighter text-transparent md:text-6xl lg:text-6xl">Trusted by Industry Leaders</h1>
             <p className="text-neutral-500 text-center text-lg max-w-[800px] mt-4 mx-auto">
               Join the ranks of forward-thinking companies already <br /> leveraging our AI technology
             </p>
@@ -89,129 +92,41 @@ export default function LandingPage() {
             <LogoCarouselDemo />
           </div>
         </div>
-        <div className="container justify-center items-center mx-auto px-12 py-12">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-neutral-950 dark:text-neutral-50 mb-4">Features & Benefits</h1>
-            <p className="text-neutral-800   dark:text-neutral-400 text-center text-lg max-w-[800px] mt-4 mx-auto">
-              Simplify crypto investing, trading, and portfolio management with <br />
-              cutting-edge tools designed for everyone—from beginners to pros.
-            </p>
+        <section className="py-24 px-4 container mx-auto">
+          <h2 className="text-4xl font-bold text-center">Features & Benefits</h2>
+          <p className="text-lg text-neutral-600 dark:text-neutral-400 text-center max-w-[700px] mx-auto mt-4">
+            Simplify automation with cutting-edge AI tools built for teams, freelancers, and enterprises alike.
+          </p>
+          {/* Features Grid */}
+          <div className="grid ml-12 mr-12 md:grid-cols-2 gap-6 mt-16">
+            <FeatureCard component={<RadialOrbitalTimelineDemo />} />
+            <FeatureCard component={<ChatMessageListDemo />} />
+            <FeatureCard component={<CardStackDemo />} />
+            <FeatureCard component={<WorldMapDemo />} />
           </div>
+        </section>
 
-          <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
-            <div className="bg-white dark:bg-black backdrop-blur-md shadow-lg  shadow-primary/10 rounded-2xl p-8 border border-neutral-200 dark:border-neutral-800">
-              <div className="flex flex-col items-center justify-center h-full min-h-[300px]">
-
-                <RadialOrbitalTimelineDemo />
-              </div>
-            </div>
-
-            <div className="bg-white dark:bg-black backdrop-blur-sm shadow-lg  shadow-primary/10 rounded-2xl p-8 border border-neutral-200 dark:border-neutral-800">
-              <div className="flex flex-col items-center justify-center h-full min-h-[500px]">
-                <ChatMessageListDemo />
-              </div>
-            </div>
-
-            <div className="bg-white dark:bg-black backdrop-blur-sm shadow-lg  shadow-primary/10 rounded-2xl p-8 border border-neutral-200 dark:border-neutral-800">
-              <div className="flex flex-col items-center justify-center h-full min-h-[200px]">
-                <CardStackDemo />
-              </div>
-            </div>
-
-            <div className="bg-white dark:bg-black backdrop-blur-sm shadow-lg  shadow-primary/10 rounded-2xl p-8 border border-neutral-200 dark:border-neutral-800">
-              <div className="flex flex-col items-center justify-center h-full min-h-[200px]">
-                {/* <h3 className="text-2xl font-bold text-white mb-2">People love us</h3> */}
-
-                <WorldMapDemo />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mr-30 ml-28">
+        <div className="mr-30 mb-8  ml-28">
           <Testimonials />
         </div>
 
         <div className="max-w-7xl mx-auto  ">
           <PricingBasic />
         </div>
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-neutral-900 dark:text-neutral-100 mb-4">Frequently Asked Questions</h2>
-            <p className="text-neutral-400 text-sm max-w-sm mx-auto">
-              Find answers to common questions about our AI-powered platform and services.
-            </p>
-          </div>
-
-          <div className="max-w-3xl mx-auto">
-            <Accordion type="single" collapsible className="w-full space-y-4">
-              <AccordionItem value="item-1" className="bg-neutral-100/50 dark:bg-neutral-900/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
-                <AccordionTrigger className="text-neutral-900 dark:text-neutral-100 hover:text-neutral-600 dark:hover:text-neutral-300 text-left">
-                  What makes your AI agents different from others?
-                </AccordionTrigger>
-                <AccordionContent className="text-neutral-800 dark:text-neutral-400">
-                  Our AI agents are built with advanced machine learning algorithms and are specifically designed for
-                  business automation. They offer superior accuracy, faster processing times, and seamless integration
-                  with existing business systems.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-2" className="bg-neutral-100/50 dark:bg-neutral-900/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
-                <AccordionTrigger className="text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 text-left">
-                  How quickly can I get started with your platform?
-                </AccordionTrigger>
-                <AccordionContent className="text-neutral-800 dark:text-neutral-400">
-                  You can get started in minutes! Our onboarding process is streamlined and includes step-by-step
-                  guidance. Most users are up and running within 15 minutes of signing up.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-3" className="bg-neutral-100/50 dark:bg-neutral-900/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
-                <AccordionTrigger className="text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 text-left">
-                  Is my data secure with your platform?
-                </AccordionTrigger>
-                <AccordionContent className="text-neutral-800 dark:text-neutral-400">
-                  Absolutely. We use enterprise-grade security measures including end-to-end encryption, regular
-                  security audits, and compliance with industry standards like SOC 2 and GDPR. Your data is protected at
-                  all times.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-4" className="bg-neutral-100/50 dark:bg-neutral-900/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
-                <AccordionTrigger className="text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 text-left">
-                  What kind of support do you offer?
-                </AccordionTrigger>
-                <AccordionContent className="text-neutral-800 dark:text-neutral-400">
-                  We provide 24/7 customer support through multiple channels including live chat, email, and phone. Our
-                  support team consists of AI specialists who can help with both technical and strategic questions.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-5" className="bg-neutral-100/50 dark:bg-neutral-900/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
-                <AccordionTrigger className="text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 text-left">
-                  Can I integrate your AI agents with my existing tools?
-                </AccordionTrigger>
-                <AccordionContent className="text-neutral-800 dark:text-neutral-400">
-                  Yes! Our platform offers extensive integration capabilities with popular business tools, CRMs,
-                  databases, and APIs. We also provide custom integration support for enterprise clients.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-6" className="bg-neutral-100/50 dark:bg-neutral-900/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
-                <AccordionTrigger className="text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 text-left">
-                  What pricing plans do you offer?
-                </AccordionTrigger>
-                <AccordionContent className="text-neutral-800 dark:text-neutral-400">
-                  We offer flexible pricing plans to suit businesses of all sizes, from startups to enterprises. Our
-                  plans include a free tier for getting started, professional plans for growing businesses, and custom
-                  enterprise solutions.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
-        </div>
+        <Faq />
+        <Cta />
         <Footer />
       </div>
     </div>
   )
+}
+
+function FeatureCard({ component }: { component: React.ReactNode }) {
+  return (
+    <div className="bg-white dark:bg-black border border-neutral-200 dark:border-neutral-800 rounded-2xl p-8 shadow-lg shadow-primary/10">
+      <div className="flex flex-col items-center justify-center min-h-[300px]">
+        {component}
+      </div>
+    </div>
+  );
 }
