@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/next"
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -26,14 +28,17 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`bg-white dark:bg-black ${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
+        className={`bg-white dark:bg-neutral-950 ${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
       ><ThemeProvider
         attribute="class"
         defaultTheme="system"
         enableSystem
         disableTransitionOnChange
+
       >
+          <Navbar />
           {children}
+          <Footer />
         </ThemeProvider>
         <Analytics />
       </body>

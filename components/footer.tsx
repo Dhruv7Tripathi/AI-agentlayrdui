@@ -1,10 +1,11 @@
-import { ArrowRight, Github, Linkedin, Twitter } from "lucide-react"
+import { ArrowRight } from "lucide-react"
+import { SiGithub, SiLinkedin, SiX } from "react-icons/si"
 import Link from "next/link"
 import Image from "next/image"
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800">
+    <footer className="w-full bg-white dark:bg-neutral-950 border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-9xl mt-8 mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-2">
@@ -24,27 +25,27 @@ const Footer = () => {
               Empowering businesses with intelligent AI agents. Transform your workflow with cutting-edge artificial
               intelligence solutions designed for the modern enterprise.
             </p>
-            <div className="flex space-x-3">
+            <div className="flex ">
               <Link
                 href="https://github.com"
-                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                className="p-2 rounded-lg  hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
                 aria-label="GitHub"
               >
-                <Github className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+                <SiGithub className="w-5 h-5 text-gray-700 dark:text-gray-300" />
               </Link>
               <Link
                 href="https://linkedin.com"
-                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                className="p-2 rounded-lg  hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+                <SiLinkedin className="w-5 h-5 text-gray-700 dark:text-gray-300" />
               </Link>
               <Link
                 href="https://twitter.com"
-                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                className="p-2 rounded-lg  hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
                 aria-label="Twitter"
               >
-                <Twitter className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+                <SiX className="w-5 h-5 text-gray-700 dark:text-gray-300" />
               </Link>
             </div>
           </div>
@@ -57,10 +58,10 @@ const Footer = () => {
               <div className="flex flex-col space-y-3">
                 {[
                   { href: "/", label: "Home" },
-                  { href: "/features", label: "Features" },
-                  { href: "/pricing", label: "Pricing" },
-                  { href: "/about", label: "About" },
-                  { href: "/contact", label: "Contact" },
+                  { href: "/#features", label: "Features" },
+                  { href: "/#pricing", label: "Pricing" },
+                  { href: "/#about", label: "About" },
+                  { href: "/#contact", label: "Contact" },
                 ].map((link) => (
                   <Link
                     key={link.href}
@@ -79,11 +80,11 @@ const Footer = () => {
               <h4 className="font-semibold text-foreground dark:text-white mb-6 text-lg">Resources</h4>
               <div className="flex flex-col space-y-3">
                 {[
-                  { href: "/blog", label: "Blog" },
-                  { href: "/documentation", label: "Documentation" },
-                  { href: "/support", label: "Support" },
-                  { href: "/privacy", label: "Privacy Policy" },
-                  { href: "/terms", label: "Terms of Service" },
+                  { href: "/#blog", label: "Blog" },
+                  { href: "/#documentation", label: "Documentation" },
+                  { href: "/#support", label: "Support" },
+                  { href: "/#privacy", label: "Privacy Policy" },
+                  { href: "/#terms", label: "Terms of Service" },
                 ].map((link) => (
                   <Link
                     key={link.href}

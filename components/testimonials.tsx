@@ -65,7 +65,7 @@ const thirdColumn = testimonials.slice(6, 9);
 
 const Testimonials = () => {
   return (
-    <section className="bg-white dark:bg-black my-20 relative w-full overflow-hidden">
+    <section className="bg-white dark:bg-neutral-950 my-20 relative w-full overflow-hidden">
       {/* Header container */}
       <div className="max-w-9xl mb-16 px-4 sm:px-6 lg:px-8 z-10 mx-auto">
         <motion.div

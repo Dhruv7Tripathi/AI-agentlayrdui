@@ -18,10 +18,10 @@ const Navbar = () => {
   return (
     <header className={cn("w-full border-b border-neutral-200 dark:border-neutral-800 z-90 ",
       // scrollY
-      //   ? "border-b border-neutral-200/50 dark:border-neutral-800/50 bg-neutral-200/40 dark:bg-neutral-900/40 shadow-lg backdrop-blur-md"
+      //   ? "border-b border-neutral-200/50 dark:border-neutral-800/50 bg-neutral-200/40 dark:bg-neutral-950/40 shadow-lg backdrop-blur-md"
       //   : "border-transparent bg-transparent shadow-none backdrop-blur-none",
     )}>
-      <nav className="container mx-auto px-8 py-3 flex items-center justify-between">
+      <nav className="container p-5 mx-auto px-8 py-3 flex items-center justify-between">
         <div className="flex  items-center space-x-2">
           <Image
             src="/logo.png"
