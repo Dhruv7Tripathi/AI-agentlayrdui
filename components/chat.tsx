@@ -70,8 +70,8 @@ export function ChatMessageListDemo() {
   };
 
   return (
-    <div className="h-[400px] border bg-background rounded-lg flex flex-col">
-      <div className="flex-1 overflow-hidden">
+    <div className="h-[600px] w-[700px] border bg-background rounded-lg flex flex-col">
+      <div className="flex-1 mt-2 overflow-hidden">
         <ChatMessageList>
           {messages.map((message) => (
             <ChatBubble
@@ -79,7 +79,7 @@ export function ChatMessageListDemo() {
               variant={message.sender === "user" ? "sent" : "received"}
             >
               <ChatBubbleAvatar
-                className="h-8 w-8 shrink-0"
+                className="h-8 mt-2 w-8 shrink-0"
                 src={
                   message.sender === "user"
                     ? "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=64&h=64&q=80&crop=faces&fit=crop"

@@ -101,11 +101,16 @@ export default function LandingPage() {
       </section>
 
       {/* Features */}
-      <section className="py-24 px-4 sm:px-6 md:px-8 container mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center">Features & Benefits</h2>
-        <p className="text-lg text-neutral-600 dark:text-neutral-400 text-center max-w-[700px] mx-auto mt-4">
-          Simplify automation with cutting-edge AI tools built for teams, freelancers, and enterprises alike.
-        </p>
+      <section className="py-24 px-4 sm:px-6 md:px-8 max-w-8xl mx-auto">
+        <div className="flex flex-col items-center text-center">
+
+          <h2 className="bg-gradient-to-br from-neutral-800 via-neutral-800 to-neutral-900/30 dark:from-neutral-100 dark:via-neutral-100 dark:to-neutral-100/30 bg-clip-text text-transparent text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-medium leading-tight max-w-6xl mx-auto">
+            Features & Benefits
+          </h2>
+          <p className="text-lg text-neutral-600 dark:text-neutral-400 text-center max-w-[550px] mx-auto mt-4">
+            Simplify automation with cutting-edge AI tools built for teams, freelancers, and enterprises alike.
+          </p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16 px-2 sm:px-6">
           <FeatureCard component={<RadialOrbitalTimelineDemo />} />
           <FeatureCard component={<ChatMessageListDemo />} />

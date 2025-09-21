@@ -6,7 +6,7 @@ export function WorldMapDemo() {
   return (
     <div className=" dark:bg-neutral-950 bg-white w-full h-full">
       <div className="max-w-7xl mx-auto text-center">
-        <p className="font-bold text-xl md:text-4xl dark:text-white text-black">
+        <p className="font-bold mb-4 mt-4 text-xl md:text-4xl dark:text-white text-black">
           Remote{" "}
           <span className="text-neutral-400">
             {"Connectivity".split("").map((word, idx) => (
