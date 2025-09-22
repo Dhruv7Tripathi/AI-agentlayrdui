@@ -70,7 +70,7 @@ export function ChatMessageListDemo() {
   };
 
   return (
-    <div className="h-[600px] w-[700px] border bg-background rounded-lg flex flex-col">
+    <div className="h-[600px] w-[700px] border bg-white dark:bg-black rounded-lg flex flex-col">
       <div className="flex-1 mt-2 overflow-hidden">
         <ChatMessageList>
           {messages.map((message) => (
@@ -117,6 +117,12 @@ export function ChatMessageListDemo() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Type your message..."
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && !e.shiftKey) {
+                e.preventDefault(); // Prevent newline
+                handleSubmit(e);    // Submit the form
+              }
+            }}
             className="min-h-12 resize-none rounded-lg bg-background border-0 p-3 shadow-none focus-visible:ring-0"
           />
           <div className="flex items-center p-3 pt-0 justify-between">

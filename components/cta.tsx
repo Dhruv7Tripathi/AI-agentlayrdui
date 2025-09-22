@@ -1,48 +1,8 @@
-// import React from 'react'
-// import Link from 'next/link'
-
-// export default function CTA() {
-//   return (
-//     <div className="bg-white dark:bg-black flex flex-col justify-center  items-center min-h-screen space-y-4 p-6 rounded-lg ">
-//       <div className='text-center bg-neutral-50 dark:bg-black  justify-center w-full rounded-xl p-12 ml-12 mr-12  border border-dashed border-neutral-800 flex flex-col items-center  mx-auto'>
-
-//         <h2 className="bg-gradient-stop mx-auto max-w-6xl text-balance bg-gradient-to-br from-neutral-800 via-neutral-800 to-neutral-900/30 dark:from-neutral-100 dark:via-neutral-100 via-50% dark:to-neutral-100/30 bg-clip-text py-2 px-2 text-6xl font-bold leading-[1.1] tracking-tighter text-transparent md:text-6xl lg:text-7xl">
-//           Ready to get started?
-//         </h2>
-//         <p className="mt-2 mb-8 max-w-xl text-center text-neutral-950 dark:text-white text-base">
-//           Join thousands of users who&apos;ve already boosted their productivity with our tools.
-//           Sign up now and take control of your time.
-//         </p>
-//         <Link
-//           href={"/createTodo"}
-//           className="group w-40 flex items-center justify-center gap-2 rounded-xl border border-neutral-600 bg-neutral-50 dark:bg-black px-5 py-3 text-sm font-semibold text-neutral-950 dark:text-white shadow-[inset_0px_0px_7px_1px_#535353] transition-all duration-300 hover:bg-neutral-200 dark:hover:bg-neutral-800/50 md:text-[1rem]"
-//         >
-//           <TextGlitch text={"Get Started"} />
-//         </Link>
-
-//       </div>
-//     </div>
-//   )
-// }
-
-// function TextGlitch({ text }: { text: string }) {
-//   return (
-//     <div className="relative overflow-hidden">
-//       <span className="invisible">{text}</span>
-//       <span className="absolute left-0 top-0 font-semibold transition-transform duration-500 ease-in-out hover:duration-300 group-hover:-translate-y-full">
-//         {text}
-//       </span>
-//       <span className="absolute left-0 top-0 translate-y-full font-semibold transition-transform duration-500 ease-in-out hover:duration-300 group-hover:translate-y-0">
-//         {text}
-//       </span>
-//     </div>
-//   )
-// }import { Button } from "@/components/ui/button"
 import { Check, ChevronRight } from "lucide-react"
 import { Button } from "./ui/button"
 export function Cta() {
   return (
-    <section className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-900 via-blue-900 to-indigo-950 p-12">
+    <section className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-900 via-blue-900 to-indigo-950 p-12">
       {/* 🟣 Dot Pattern Background */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;utf8,<svg width=\'20\' height=\'20\' xmlns=\'http://www.w3.org/2000/svg\'><circle cx=\'2\' cy=\'2\' r=\'1.5\' fill=\'%23ffffff\' fill-opacity=\'0.05\' /></svg>')] bg-[length:20px_20px] bg-repeat z-0" />
 
@@ -80,7 +40,7 @@ export function Cta() {
         <div className="absolute left-1/2 top-12 bottom-12 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent hidden lg:block"></div>
 
         {/* Right side */}
-        <div className="space-y-8">
+        <div className="space-y-8 ml-0 lg:ml-24">
           <div className="space-y-4">
             <div className="text-5xl font-bold text-white">$29.99</div>
             <div className="text-xl text-blue-200">per user per month</div>

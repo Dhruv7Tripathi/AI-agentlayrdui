@@ -124,8 +124,8 @@ export default function LandingPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 px-4 md:ml-12">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 ">
+        <div className="max-w-8xl mx-auto">
           <Testimonials />
         </div>
       </section>

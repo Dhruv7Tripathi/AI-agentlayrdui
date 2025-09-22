@@ -140,7 +140,7 @@ const Footer = () => {
           <Link
             href="https://layrdui.dhruvtripathi.in"
             target="_blank"
-            className="ml-1 underline hover:text-blue-600"
+            className="ml-1  hover:text-blue-600"
           >
             LayrdUI
           </Link>
