@@ -93,7 +93,7 @@ export function Pricing({
         </span>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 sm:2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {plans.map((plan, index) => (
           <motion.div
             key={index}
@@ -192,7 +192,7 @@ export function Pricing({
                   "group relative w-full gap-2 dark:hover:bg-neutral-900 overflow-hidden text-lg font-semibold tracking-tighter",
                   "transform-gpu ring-offset-current transition-all duration-300 ease-out ",
                   plan.isPopular
-                    ? "dark:bg-neutral-950 bg-neutral-50  dark:text-white text-black"
+                    ? "dark:bg-black bg-neutral-50  dark:text-white text-black"
                     : "bg-background text-foreground"
                 )}
               >

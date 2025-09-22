@@ -16,9 +16,9 @@ const menuItems = [
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
   return (
-    <header className={cn("w-full border-b border-neutral-200 dark:border-neutral-800 z-90 ",
+    <header className={cn("w-full border-b border-neutral-200 dark:border-black z-90 ",
       // scrollY
-      //   ? "border-b border-neutral-200/50 dark:border-neutral-800/50 bg-neutral-200/40 dark:bg-neutral-950/40 shadow-lg backdrop-blur-md"
+      //   ? "border-b border-neutral-200/50 dark:border-neutral-800/50 bg-neutral-200/40 dark:bg-black/40 shadow-lg backdrop-blur-md"
       //   : "border-transparent bg-transparent shadow-none backdrop-blur-none",
     )}>
       <nav className="container p-5 mx-auto px-8 py-3 flex items-center justify-between">
@@ -30,7 +30,7 @@ const Navbar = () => {
             height={30}
             className="object-contain rounded-xl"
           />
-          <Link href="/" className="text-xl font-bold">
+          <Link href="/" className="text-xl text-blue-500 font-bold">
             AI Agent
           </Link>
           <div className="hidden md:flex ml-12 ">
@@ -52,7 +52,7 @@ const Navbar = () => {
               </Link>
             </button>
             <button>
-              <Link href="/signup" className="ml-4 bg-blue-600 text-md text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+              <Link href="/signup" className="ml-4 dark:text-neutral-900 text-neutral-100 bg-neutral-900 dark:bg-neutral-100 text-md  px-4 py-2 rounded-lg hover:bg-black dark:hover:bg-white transition-colors">
                 Sign Up
               </Link>
             </button>

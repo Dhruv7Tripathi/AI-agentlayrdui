@@ -5,9 +5,9 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-white dark:bg-neutral-950 border-t border-gray-200 dark:border-gray-800">
-      <div className="max-w-9xl mt-8 mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+    <footer className="w-full bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800">
+      <div className="max-w-9xl mt-8 mx-auto px-4 mb-16 sm:px-6 lg:px-8  lg:py-4">
+        <div className="grid grid-cols-1  lg:grid-cols-4 gap-8">
           {/* Logo & Description */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
@@ -20,7 +20,7 @@ const Footer = () => {
               />
               <Link
                 href="/"
-                className="text-xl font-bold text-foreground dark:text-white"
+                className="text-xl font-bold  text-blue-500"
               >
                 AI Agent
               </Link>
@@ -132,19 +132,19 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800 flex justify-center items-center text-sm text-muted-foreground dark:text-gray-400">
-          <p>
-            Made with{" "}
-            <span className="text-blue-500 animate-pulse">💙</span> by{" "}
-            <Link
-              href="https://layrdui.dhruvtripathi.in"
-              target="_blank"
-              className="ml-1 underline hover:text-blue-600"
-            >
-              LayrdUI
-            </Link>
-          </p>
-        </div>
+      </div>
+      <div className="mt-12 mb-4 pt-8 border-t border-gray-200 dark:border-gray-800 flex justify-center items-center text-sm text-muted-foreground dark:text-gray-400">
+        <p>
+          Made with{" "}
+          <span className="text-blue-500 animate-pulse">💙</span> by{" "}
+          <Link
+            href="https://layrdui.dhruvtripathi.in"
+            target="_blank"
+            className="ml-1 underline hover:text-blue-600"
+          >
+            LayrdUI
+          </Link>
+        </p>
       </div>
     </footer>
   );

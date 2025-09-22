@@ -12,7 +12,7 @@ import { CardStackDemo } from "@/components/cards"
 import { RadialOrbitalTimelineDemo } from "@/components/orbital"
 import { ChatMessageListDemo } from "@/components/chat"
 import Faq from "./faq"
-import Cta from "./cta"
+import { Cta } from "./cta"
 import VaultLock from "./ui/vault-lock"
 
 export default function LandingPage() {
@@ -26,7 +26,7 @@ export default function LandingPage() {
   }
 
   return (
-    <main className="bg-white dark:bg-neutral-950 text-neutral-900 dark:text-white">
+    <main className="bg-white dark:bg-black text-neutral-900 dark:text-white">
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col justify-center text-center px-4 sm:px-6 md:px-10 lg:px-0 pt-24">
         <div className="lg:mb-20 lg:py-12 lg:mt-12">
@@ -42,14 +42,14 @@ export default function LandingPage() {
           {/* CTA Buttons */}
           <div className="flex flex-wrap mt-6 gap-4 justify-center mb-12">
             <Link href="/#">
-              <Button className="bg-blue-600 text-white text-base sm:text-lg px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+              <Button className="bg-blue-700 text-white text-base sm:text-lg px-6 py-2 rounded-lg hover:bg-blue-700 transition">
                 Get Started
               </Button>
             </Link>
             <motion.div>
               <Button
                 size="lg"
-                className="text-base hover:bg-white hover:dark:bg-neutral-950 bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 group"
+                className="text-base hover:bg-white hover:dark:bg-black bg-white dark:bg-black text-neutral-900 dark:text-neutral-100 group"
               >
                 Learn More
                 <motion.span whileHover={{ x: 4 }} transition={{ type: "spring", stiffness: 300, damping: 20 }}>
@@ -79,7 +79,7 @@ export default function LandingPage() {
           transition={{ duration: 1, delay: 0.5 }}
           className="relative py-8 mx-auto max-w-7xl w-full px-4"
         >
-          <div className="relative z-10 w-full h-[250px] sm:h-[400px] md:h-[600px] lg:h-[800px] rounded-2xl bg-white dark:bg-neutral-950 backdrop-blur-md overflow-hidden">
+          <div className="relative z-10 w-full h-[250px] sm:h-[400px] md:h-[600px] lg:h-[800px] rounded-2xl bg-white dark:bg-black backdrop-blur-md overflow-hidden">
             <Image src="/dashboard.png" alt="AI-powered SaaS Dashboard" fill
               className="rounded-3xl p-2 object-cover"
               priority />
@@ -141,7 +141,7 @@ export default function LandingPage() {
       <section className="py-20 px-4">
         <Faq />
       </section>
-      <section className="pb-20 px-4">
+      <section className="pb-20 min-h-screen items-center flex justify-center px-4">
         <Cta />
       </section>
     </main>
@@ -150,7 +150,7 @@ export default function LandingPage() {
 
 function FeatureCard({ component }: { component: React.ReactNode }) {
   return (
-    <div className="bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 rounded-2xl  shadow-md hover:shadow-lg transition">
+    <div className="bg-white dark:bg-black border border-neutral-200 dark:border-neutral-800 rounded-2xl  shadow-md hover:shadow-lg transition">
       <div className="flex flex-col items-center justify-center min-h-[300px]">
         {component}
       </div>

@@ -73,7 +73,7 @@ const VaultLock = ({
       className={cn(
         "group relative",
         "h-[26rem] w-[700px]",
-        "rounded-md border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-950"
+        "rounded-md border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-black"
       )}
     >
       <motion.div
@@ -94,7 +94,7 @@ const VaultLock = ({
         variants={vaultVariant}
         className={cn(
           "absolute inset-x-0 mx-auto",
-          "top-[60px] flex mt-20 h-[6.5rem] w-[6.5rem] items-center justify-center overflow-hidden rounded-full bg-neutral-50 dark:bg-neutral-950 p-1"
+          "top-[60px] flex mt-20 h-[6.5rem] w-[6.5rem] items-center justify-center overflow-hidden rounded-full bg-neutral-50 dark:bg-black p-1"
         )}
       >
         {/* <motion.div

@@ -49,7 +49,7 @@ export function WorldMap({ dots = [], lineColor = "#0ea5e9" }: MapProps) {
   };
 
   return (
-    <div className="w-full aspect-[2/1] dark:bg-neutral-950 bg-white rounded-lg relative font-sans">
+    <div className="w-full aspect-[2/1] dark:bg-black bg-white rounded-lg relative font-sans">
       {svgMap && (
         <Image
           src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
