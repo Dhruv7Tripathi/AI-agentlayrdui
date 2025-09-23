@@ -25,18 +25,7 @@ const VaultLock = ({
     close: { transform: "translateY(0px)", transition: { duration: 0.3, ease: "easeInOut" } },
   };
 
-  const shineVariant: Variants = {
-    open: {
-      transform: "translateX(-50%) translateY(0%) rotate(45deg)",
-      scale: 1.2,
-      transition: { duration: 0.6, ease: [0.65, 0, 0.35, 1], delay: 2.1 },
-    },
-    close: {
-      transform: "translateX(-125%) translateY(-60%) rotate(45deg)",
-      scale: 1,
-      transition: { duration: 0.4, ease: [0.65, 0, 0.35, 1] },
-    },
-  };
+
 
   const lockVariant: Variants = {
     open: {
