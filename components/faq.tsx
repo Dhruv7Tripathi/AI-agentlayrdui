@@ -13,7 +13,8 @@ export default function Faq() {
 
       <div className="max-w-3xl mx-auto">
         <Accordion type="single" collapsible className="w-full space-y-4">
-          <AccordionItem value="item-1" className="bg-neutral-100/50 dark:bg-black/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
+          <AccordionItem value="item-1" className="bg-neutral-100/50 dark:bg-black
+/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
             <AccordionTrigger className="text-neutral-900 dark:text-neutral-100 hover:text-neutral-600 dark:hover:text-neutral-300 text-left">
               What makes your AI agents different from others?
             </AccordionTrigger>
@@ -24,7 +25,8 @@ export default function Faq() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-2" className="bg-neutral-100/50 dark:bg-black/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
+          <AccordionItem value="item-2" className="bg-neutral-100/50 dark:bg-black
+/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
             <AccordionTrigger className="text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 text-left">
               How quickly can I get started with your platform?
             </AccordionTrigger>
@@ -34,7 +36,8 @@ export default function Faq() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-3" className="bg-neutral-100/50 dark:bg-black/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
+          <AccordionItem value="item-3" className="bg-neutral-100/50 dark:bg-black
+/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
             <AccordionTrigger className="text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 text-left">
               Is my data secure with your platform?
             </AccordionTrigger>
@@ -45,7 +48,8 @@ export default function Faq() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-4" className="bg-neutral-100/50 dark:bg-black/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
+          <AccordionItem value="item-4" className="bg-neutral-100/50 dark:bg-black
+/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
             <AccordionTrigger className="text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 text-left">
               What kind of support do you offer?
             </AccordionTrigger>
@@ -55,7 +59,8 @@ export default function Faq() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-5" className="bg-neutral-100/50 dark:bg-black/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
+          <AccordionItem value="item-5" className="bg-neutral-100/50 dark:bg-black
+/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
             <AccordionTrigger className="text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 text-left">
               Can I integrate your AI agents with my existing tools?
             </AccordionTrigger>
@@ -65,7 +70,8 @@ export default function Faq() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-6" className="bg-neutral-100/50 dark:bg-black/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
+          <AccordionItem value="item-6" className="bg-neutral-100/50 dark:bg-black
+/50 rounded-lg border border-neutral-200 dark:border-neutral-800 px-6">
             <AccordionTrigger className="text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 text-left">
               What pricing plans do you offer?
             </AccordionTrigger>

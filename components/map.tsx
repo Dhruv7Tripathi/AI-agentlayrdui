@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 
 export function WorldMapDemo() {
   return (
-    <div className=" dark:bg-black bg-white w-full h-full">
+    <div className=" dark:bg-black
+ bg-white w-full h-full">
       <div className="max-w-7xl mx-auto text-center">
         <p className="font-bold mb-4 mt-4 text-xl md:text-4xl dark:text-white text-black">
           Remote{" "}

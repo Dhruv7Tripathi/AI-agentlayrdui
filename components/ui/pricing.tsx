@@ -54,8 +54,7 @@ export function Pricing({
           x: x / window.innerWidth,
           y: y / window.innerHeight,
         },
-        colors: ["#3B82F6", "#2563EB", "#1D4ED8"], // Tailwind blue-500, 600, 700
-
+        colors: ["#3B82F6", "#2563EB", "#1D4ED8"],
         ticks: 200,
         gravity: 1.2,
         decay: 0.94,
@@ -67,17 +66,17 @@ export function Pricing({
   };
 
   return (
-    <div className="container py-20">
-      <div className="text-center space-y-4 mb-12">
-        <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+    <div className="container py-12 sm:py-16 md:py-20  sm:px-6">
+      <div className="text-center space-y-3 sm:space-y-4 mb-8 sm:mb-10 md:mb-12">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
           {title}
         </h2>
-        <p className="text-muted-foreground mx-auto max-w-xl text-lg whitespace-pre-line">
+        <p className="text-muted-foreground mx-auto max-w-xl text-base sm:text-lg whitespace-pre-line px-4 sm:px-0">
           {description}
         </p>
       </div>
 
-      <div className="flex justify-center mb-10">
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-0 mb-8 sm:mb-10">
         <label className="relative inline-flex items-center cursor-pointer">
           <Label>
             <Switch
@@ -88,12 +87,12 @@ export function Pricing({
             />
           </Label>
         </label>
-        <span className="ml-2 font-semibold">
+        <span className="sm:ml-2 font-semibold text-sm sm:text-base text-center">
           Annual billing <span className="text-primary">(Save 20%)</span>
         </span>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
         {plans.map((plan, index) => (
           <motion.div
             key={index}
@@ -118,10 +117,10 @@ export function Pricing({
               opacity: { duration: 0.5 },
             }}
             className={cn(
-              `rounded-2xl border-[1px] p-6 bg-background text-center lg:flex lg:flex-col lg:justify-center relative`,
+              `rounded-xl sm:rounded-2xl border-[1px] p-4 sm:p-5 md:p-6 bg-background text-center lg:flex lg:flex-col lg:justify-center relative`,
               plan.isPopular ? "border-blue-400 border-2" : "border-border",
               "flex flex-col",
-              !plan.isPopular && "mt-5",
+              !plan.isPopular && "sm:mt-5",
               index === 0 || index === 2
                 ? "z-0 transform translate-x-0 translate-y-0 -translate-z-[50px] rotate-y-[10deg]"
                 : "z-10",
@@ -131,18 +130,18 @@ export function Pricing({
           >
             {plan.isPopular && (
               <div className="absolute top-0 right-0 text-neutral-50 dark:text-neutral-950 bg-neutral-800 dark:bg-neutral-200 py-0.5 px-2 rounded-bl-xl rounded-tr-xl flex items-center">
-                <Star className="text-blue-600 h-4 w-4 fill-current" />
-                <span className="text-blue-600 ml-1 font-sans font-semibold">
+                <Star className="text-blue-600 h-3.5 w-3.5 sm:h-4 sm:w-4 fill-current" />
+                <span className="text-blue-600 ml-1 font-sans font-semibold text-xs sm:text-sm">
                   Popular
                 </span>
               </div>
             )}
             <div className="flex-1 flex flex-col">
-              <p className="text-base font-semibold text-muted-foreground">
+              <p className="text-sm sm:text-base font-semibold text-muted-foreground">
                 {plan.name}
               </p>
-              <div className="mt-6 flex items-center justify-center gap-x-2">
-                <span className="text-5xl font-bold tracking-tight text-foreground">
+              <div className="mt-4 sm:mt-5 md:mt-6 flex items-center justify-center gap-x-1.5 sm:gap-x-2">
+                <span className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground">
                   <NumberFlow
                     value={
                       isMonthly ? Number(plan.price) : Number(plan.yearlyPrice)
@@ -162,26 +161,26 @@ export function Pricing({
                   />
                 </span>
                 {plan.period !== "Next 3 months" && (
-                  <span className="text-sm font-semibold leading-6 tracking-wide text-muted-foreground">
+                  <span className="text-xs sm:text-sm font-semibold leading-6 tracking-wide text-muted-foreground">
                     / {plan.period}
                   </span>
                 )}
               </div>
 
-              <p className="text-xs leading-5 text-muted-foreground">
+              <p className="text-xs leading-5 text-muted-foreground mt-1">
                 {isMonthly ? "billed monthly" : "billed annually"}
               </p>
 
-              <ul className="mt-5 gap-2 flex flex-col">
+              <ul className="mt-4 sm:mt-5 gap-1.5 sm:gap-2 flex flex-col">
                 {plan.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-2">
-                    <Check className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-left">{feature}</span>
+                    <Check className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary mt-0.5 sm:mt-1 flex-shrink-0" />
+                    <span className="text-left text-sm sm:text-base">{feature}</span>
                   </li>
                 ))}
               </ul>
 
-              <hr className="w-full my-4" />
+              <hr className="w-full my-3 sm:my-4" />
 
               <Link
                 href={plan.href}
@@ -189,16 +188,16 @@ export function Pricing({
                   buttonVariants({
                     variant: "outline",
                   }),
-                  "group relative w-full gap-2 dark:hover:bg-neutral-900 overflow-hidden text-lg font-semibold tracking-tighter",
-                  "transform-gpu ring-offset-current transition-all duration-300 ease-out ",
+                  "group relative w-full gap-2 dark:hover:bg-neutral-900 overflow-hidden text-base sm:text-lg font-semibold tracking-tighter py-2 sm:py-2.5",
+                  "transform-gpu ring-offset-current transition-all duration-300 ease-out",
                   plan.isPopular
-                    ? "dark:bg-black bg-neutral-50  dark:text-white text-black"
+                    ? "dark:bg-stone-900 bg-neutral-50 dark:text-white text-black"
                     : "bg-background text-foreground"
                 )}
               >
                 {plan.buttonText}
               </Link>
-              <p className="mt-6 text-xs leading-5 text-muted-foreground">
+              <p className="mt-4 sm:mt-5 md:mt-6 text-xs leading-5 text-muted-foreground">
                 {plan.description}
               </p>
             </div>

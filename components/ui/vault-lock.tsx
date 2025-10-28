@@ -61,7 +61,7 @@ const VaultLock = ({
       animate={isHovered ? "open" : "close"}
       className={cn(
         "group relative",
-        "h-[26rem] w-[700px]",
+        "h-[26rem] w-[680px]",
         "rounded-md border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-black"
       )}
     >
