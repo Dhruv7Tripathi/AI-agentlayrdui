@@ -5,8 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-
-// Google Fonts
+import TopBanner from "@/components/ui/top-banner";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -94,6 +93,7 @@ export default function RootLayout({
         className={`bg-white dark:bg-black
  ${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
       >
+        <TopBanner />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
